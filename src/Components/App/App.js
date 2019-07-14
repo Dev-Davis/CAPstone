@@ -7,8 +7,6 @@ import {
 } from 'react-router-dom';
 import './App.scss';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -16,6 +14,7 @@ import HatNav from '../HatNav/HatNav';
 import Auth from '../Auth/Auth';
 import Home from '../Home/Home';
 import Profile from '../MyProfile/MyProfile';
+import SingleHat from '../SingleHat/SingleHat';
 
 import connection from '../../helpers/connection';
 
@@ -69,6 +68,7 @@ class App extends React.Component {
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
                   <PrivateRoute path='/home' component={Home} authed={authed} />
                   <PrivateRoute path='/profile' component={Profile} authed={authed} />
+                  <PrivateRoute path='/single/:id' component={SingleHat} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
               </div>

@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import './HatNav.scss';
+
 import React from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import {
@@ -11,14 +13,15 @@ import {
   Nav,
   NavItem,
   NavLink,
- } from 'reactstrap';
+} from 'reactstrap';
 import PropTypes from 'prop-types';
 
 
-class MyNavbar extends React.Component {
-  state ={ 
+class HatNav extends React.Component {
+  state = {
     isOpen: false,
   }
+
   static propTypes = {
     authed: PropTypes.bool.isRequired,
   }
@@ -41,7 +44,10 @@ render() {
       return (
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink tag={RRNavLink} to='/myProfile'>My Profile</NavLink>
+            <NavLink tag={RRNavLink} to='/home' >Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={RRNavLink} to='/profile'>My Profile</NavLink>
           </NavItem>
           <NavItem>
             <NavLink onClick={this.logMeOut}>Logout</NavLink>
@@ -49,12 +55,12 @@ render() {
         </Nav>
       );
     }
-    return <Nav className="ml-auto" navbar />
+    return <Nav className="ml-auto" navbar />;
   };
   return (
     <div className="MyNavbar">
-      <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">CAPstone</NavbarBrand>
+      <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/">Horder Dome</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
@@ -65,4 +71,4 @@ render() {
 }
 }
 
-export default MyNavbar;
+export default HatNav;
