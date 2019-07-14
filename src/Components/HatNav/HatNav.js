@@ -41,6 +41,9 @@ render() {
       return (
         <Nav className="ml-auto" navbar>
           <NavItem>
+            <NavLink tag={RRNavLink} to='/myProfile'>My Profile</NavLink>
+          </NavItem>
+          <NavItem>
             <NavLink onClick={this.logMeOut}>Logout</NavLink>
           </NavItem>
         </Nav>

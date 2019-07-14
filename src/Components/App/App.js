@@ -15,6 +15,7 @@ import 'firebase/auth';
 import HatNav from '../HatNav/HatNav';
 import Auth from '../Auth/Auth';
 import Home from '../Home/Home';
+import Profile from '../MyProfile/MyProfile';
 
 import connection from '../../helpers/connection';
 
@@ -67,6 +68,7 @@ class App extends React.Component {
                 <Switch>
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
                   <PrivateRoute path='/home' component={Home} authed={authed} />
+                  <PrivateRoute path='/profile' component={Profile} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
               </div>
