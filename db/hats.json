@@ -1,0 +1,292 @@
+{
+  "hats": {
+    "hat01" :
+    {
+      "name": "I Get Awesome",
+      "imageUrl": "https://i.ibb.co/gwTmZZ4/i-dont-get-drunk.png",
+      "type": "Trucker Hat",
+      "colorWay": "Black and White",
+      "description": "Black front with white fishnet on the back. With a slightly curved black brim that says I don't get drunk, I get awesome on the front",
+      "uid": "8346656615"
+    },
+    "hat02" :
+    {
+      "name": "Bad Decisions",
+      "imageUrl": "https://i.ibb.co/NVLtBz0/bad-decisions.png",
+      "type": "Trucker Hat",
+      "colorWay": "Black on Black",
+      "description": "Black front with black fishnet on the back. With a slightly curved black brim that says Pretty Good at Bad Decisions on the front",
+      "uid": "8346656615"
+    },
+    "hat03" :
+    {
+      "name": "Atari",
+      "imageUrl": "https://i.ibb.co/QNtXV42/atari.png",
+      "type": "Trucker Hat",
+      "colorWay": "Black, White, and Red",
+      "description": "White front with black fishnet on the back. Red Atari logo with a straight red brim.",
+      "uid": "8346656615"
+    },
+    "hat04" :
+    {
+      "name": "You'll Float Too",
+      "imageUrl": "https://i.ibb.co/2yj2Y4p/you-039-ll-float-too.png",
+      "type": "Dad Hat",
+      "colorWay": "Black and White",
+      "description": "Concrete gray hat with a worn look and slightly curved brim.",
+      "uid": "8346656615"
+    },
+    "hat05" :
+    {
+      "name": "Pizza Planet",
+      "imageUrl": "https://i.ibb.co/RDQWbVK/toy-story-pizza-planet.png",
+      "type": "Dad Hat",
+      "colorWay": "Red",
+      "description": "A solid red hat with the Pizza Planet logo from Toy Story in white letters.",
+      "uid": "8346656615"
+    },
+    "hat06" :
+    {
+      "name": "South Park Stan",
+      "imageUrl": "https://i.ibb.co/Z6ng3K1/stan-south-park.png",
+      "type": "Dad Hat",
+      "colorWay": "Tan",
+      "description": "Solid tan hat with a stitched figure of Stan from South Park on the front.",
+      "uid": "8346656615"
+    },
+    "hat07" :
+    {
+      "name": "Single AF",
+      "imageUrl": "https://i.ibb.co/wSD0fjm/single-af.png",
+      "type": "Dad Hat",
+      "colorWay": "Maroon",
+      "description": "A simple maroon hat that says Single AF.",
+      "uid": "8346656615"
+    },
+    "hat08" :
+    {
+      "name": "Reptar",
+      "imageUrl": "https://i.ibb.co/g7WZNVX/reptar.png",
+      "type": "Dad Hat",
+      "colorWay": "Black",
+      "description": "Black front with a Reptar figure stitched in the front and a slightly curved brim",
+      "uid": "8346656615"
+    },
+    "hat09" :
+    {
+      "name": "South Park Kyle",
+      "imageUrl": "https://i.ibb.co/F6LgxTs/kyle-south-park.png",
+      "type": "Dad Hat",
+      "colorWay": "Blue",
+      "description": "Solid blue hat with a stiched figure of Kyle from South Park on the front.",
+      "uid": "8346656615"
+    },
+    "hat10" :
+    {
+      "name": "Double Dare",
+      "imageUrl": "https://i.ibb.co/8P1jQn6/double-dare.png",
+      "type": "Trucker Hat",
+      "colorWay": "Red and Green",
+      "description": "Red hat with Double Darre logo stitched in the front with green slime replication drops on the brim.",
+      "uid": "8346656615"
+    },
+    "hat11" :
+    {
+      "name": "Daffy Duck",
+      "imageUrl": "https://i.ibb.co/9gc4076/daffy-duck.png",
+      "type": "Trucker Hat",
+      "colorWay": "Black",
+      "description": "Black hat with a stitched firgure of Daffy Duck on the front.",
+      "uid": "8346656615"
+    },
+    "hat12" :
+    {
+      "name": "Bob Ross",
+      "imageUrl": "https://i.ibb.co/Cvm90tV/bob-ross.png",
+      "type": "Dad Hat",
+      "colorWay": "White and Black",
+      "description": "Solid white hat with a black outline figure of Bob Ross stitched in the front.",
+      "uid": "8346656615"
+    },
+    "hat13" :
+    {
+      "name": "Biggie",
+      "imageUrl": "https://i.ibb.co/vQrBtvh/biggie-crown.png",
+      "type": "Dad Hat",
+      "colorWay": "Black and White",
+      "description": "Black hat with a white crown outline above the words Biggie in white capital letters. With a slightly curved brim.",
+      "uid": "8346656615"
+    },
+    "hat14" :
+    {
+      "name": "Bad Choices",
+      "imageUrl": "https://i.ibb.co/g6g5nXN/bad-choices-good-stories.png",
+      "type": "Dad Hat",
+      "colorWay": "Black and White",
+      "description": "Black hat with a slightly worn look that says Bad Choices, Good Stories on the front in white letters. With a slightly curved brim.",
+      "uid": "8346656615"
+    },
+    "hat15" :
+    {
+      "name": "Mario Beanie",
+      "imageUrl": "https://i.ibb.co/PmrHkYd/super-mario.png",
+      "type": "Beanie",
+      "colorWay": "Black",
+      "description": "Black beanie with Mario on it in traditional outfit.",
+      "uid": "8346656615"
+    },
+    "hat16" :
+    {
+      "name": "Pikachu Beanie",
+      "imageUrl": "https://i.ibb.co/XzCvpQ1/pikachu.png",
+      "type": "Beanie",
+      "colorWay": "Yellow",
+      "description": "All yellow beanie as a duplication of Pikachu's ears and face.",
+      "uid": "8346656615"
+    },
+    "hat17" :
+    {
+      "name": "Jack Skellington Beanie",
+      "imageUrl": "https://i.ibb.co/qgYLtt2/jack-skellington.png",
+      "type": "Beanie",
+      "colorWay": "White and Black",
+      "description": "All white beanie with replication of Jack Skellington's face in black.",
+      "uid": "8346656615"
+    },
+    "hat18" :
+    {
+      "name": "Charizard Beanie",
+      "imageUrl": "https://i.ibb.co/hRgX5ZT/charizard.png",
+      "type": "Beanie",
+      "colorWay": "Orange",
+      "description": "Orange beanie with a replication of Charizard's eyes and ears on the front.",
+      "uid": "8346656615"
+    },
+    "hat19" :
+    {
+      "name": "Transformers",
+      "imageUrl": "https://i.ibb.co/QcDS4F6/black-panther.png",
+      "type": "Beanie",
+      "colorWay": "Black and Purple",
+      "description": "Black and Purple striped beanie with transformers logo on the front.",
+      "uid": "8346656615"
+    },
+    "hat20" :
+    {
+      "name": "Tazmanian Devil Lenticular Snapback",
+      "imageUrl": "https://i.ibb.co/M2NYym2/tazz-lentic.png",
+      "type": "Snapback Hat",
+      "colorWay": "Red",
+      "description": "Red hat with a 90's style lenticular bill with the Tazmanian Devil character logo stitched in the front.",
+      "uid": "8346656615"
+    },
+    "hat21" :
+    {
+      "name": "Spider-Man Snapback",
+      "imageUrl": "https://i.ibb.co/Gpj4Qb1/spiderman.png",
+      "type": "Snapback Hat",
+      "colorWay": "Red and Blue",
+      "description": "Snapback hat with traditional Spider-Man colors with a black Spider-Man logo stitched in the front.",
+      "uid": "8346656615"
+    },
+    "hat22" :
+    {
+      "name": "Rocko Lenticular Snapback",
+      "imageUrl": "https://i.ibb.co/DL71sS8/rocko-lentic.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black and White",
+      "description": "A lighbt purple snapback with a 90's style matching lenticular bill and the Rocko and Spunky character stitched on the front.",
+      "uid": "8346656615"
+    },
+    "hat23" :
+    {
+      "name": "PlayStation Snapback",
+      "imageUrl": "https://i.ibb.co/K7mwZBH/playstation-lentic.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black and Black",
+      "description": "Black hat with a patent leather brim with the classic PlayStation letters from the controller buttons.",
+      "uid": "8346656615"
+    },
+    "hat24" :
+    {
+      "name": "Ouija Snapback",
+      "imageUrl": "https://i.ibb.co/CJX2KT4/ouija.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black and Cream",
+      "description": "Black hat with a Planchette logo on the front with a replica of the game board as the brim.",
+      "uid": "8346656615"
+    },
+    "hat25" :
+    {
+      "name": "Marvin the Martian Lenticular Snapback",
+      "imageUrl": "https://i.ibb.co/Dz0tK4R/marvin-lentic.png",
+      "type": "Snapback Hat",
+      "colorWay": "Light teal",
+      "description": "Light teal snapback with a 90's style lenticular bill with the Marvin the Martian character stitched in the front.",
+      "uid": "8346656615"
+    },
+    "hat26" :
+    {
+      "name": "Luigi Snapback",
+      "imageUrl": "https://i.ibb.co/VpjgfrB/luigi.png",
+      "type": "Snapback Hat",
+      "colorWay": "Green and White",
+      "description": "Classic Luigi Green from the Mario Brothers series with the L logo on the front of the hat.",
+      "uid": "8346656615"
+    },
+    "hat27" :
+    {
+      "name": "Gerald Snaoback",
+      "imageUrl": "https://i.ibb.co/N2QfxZq/hey-arnold-gerald-33.png",
+      "type": "Snapback Hat",
+      "colorWay": "Red and White",
+      "description": "Red hat with the white numbers 33 on the front of the hat to match the shirt that Gerald wore on the Hey Arnold show",
+      "uid": "8346656615"
+    },
+    "hat28" :
+    {
+      "name": "Harley and Joker Snapback",
+      "imageUrl": "https://i.ibb.co/N9qTpvz/harley-joker-kiss.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black, White, and Purple",
+      "description": "Black snapbacl hat with a montage of Joker and Harley Quinn kissing on the front with Hahaha in a black outline on a purple bill.",
+      "uid": "8346656615"
+    },
+    "hat29" :
+    {
+      "name": "Jason Voorhees Snapback",
+      "imageUrl": "https://i.ibb.co/bX324gJ/friday-the-13th.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black and Red",
+      "description": "Black Friday the 13th slasher style hat with Jason's name in red, with a replica of the maak and bloodstains.",
+      "uid": "8346656615"
+    },
+    "hat30" :
+    {
+      "name": "Bugs Bunny Lenticular Snapback",
+      "imageUrl": "https://i.ibb.co/hD9pk9k/bugs-lentic.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black",
+      "description": "Black hat with a 90's style matching lenticular bill with a stitched in Bugs Bunny character on the front.",
+      "uid": "8346656615"
+    },
+    "hat31" :
+    {
+      "name": "Black Panther Ears Snapback",
+      "imageUrl": "https://i.ibb.co/gvsFcgm/Black-Panther-ears.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black and White",
+      "description": "Black Panther leather snapback hat with classic Black Panther lining and Black Panther ears.",
+      "uid": "8346656615"
+    },  
+    "hat32" :
+    {
+      "name": "Black Panther Logo Snapback",
+      "imageUrl": "https://i.ibb.co/jWg1knf/black-Panther-leather-logo.png",
+      "type": "Snapback Hat",
+      "colorWay": "Black and Black",
+      "description": "Black Panther black leather hat with the Black Panther logo on the front.",
+      "uid": "8346656615"
+    } 
+  }
+}
