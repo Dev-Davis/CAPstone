@@ -11,7 +11,7 @@ class HatsCard extends React.Component {
   render() {
     const { hats } = this.props;
     return (
-      <div className="card" style={{ width: 362 }}>
+      <div className="card col-3" style={{ width: 362 }}>
         <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" />
         <div className="StuffCard col-10 offset-1">
             <div className="card-body">

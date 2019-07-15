@@ -32,7 +32,7 @@ class Home extends React.Component {
     console.error(makeHatCards);
 
     return (
-      <div className="Home col-8 offset-2">
+      <div className="Home col">
         <h1 className="header-title">Home</h1>
         <div className="d-flex flex-wrap">
           {makeHatCards}
