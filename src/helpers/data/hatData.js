@@ -33,7 +33,7 @@ const getMyHats = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-const postNewHat = newHat => axios.post(`${baseUrl}/hats.json`, postNewHat);
+const postNewHat = newHat => axios.post(`${baseUrl}/hats.json`, newHat);
 
 export default {
   getHats,
