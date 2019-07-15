@@ -3,9 +3,6 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 class Profile extends React.Component {
-  state = {
-    hats: [],
-  }
 
   render() {
     return (

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const hatShape = PropTypes.shape({
+const hatShapes = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
@@ -8,4 +8,4 @@ const hatShape = PropTypes.shape({
   description: PropTypes.string.isRequired,
 });
 
-export default { hatShape };
+export default { hatShapes };

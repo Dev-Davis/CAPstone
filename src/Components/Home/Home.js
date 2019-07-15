@@ -1,9 +1,8 @@
 import React from 'react';
-import firebase from 'firebase/app';
-// import { Link } from 'react-router-dom';
+
+import HatsCard from '../HatsCard/HatsCard';
 
 import hatData from '../../helpers/data/hatData';
-import HatsCard from '../HatsCard/HatsCard';
 
 import './Home.scss';
 
@@ -13,29 +12,30 @@ class Home extends React.Component {
   }
 
   getHats = () => {
-    const { uid } = firebase.auth().currentUser;
-    hatData.getHats(uid)
-      .then(hats => this.setState({ hats }))
-      .catch(err => console.error('could not get hats to Home', err));
+    hatData.getMyHats()
+      .then(hats => this.setState({hats}))
+      .catch(err => console.error('could not get hats for home', err));
   }
 
-  componentDidMount = () => {
+
+  componentDidMount() {
     this.getHats();
   }
 
   render() {
-    const makeCards = this.state.hats.map(hat => (
+    const makeHatCards = this.state.hats.map(hat => (
       <HatsCard
         key={hat.id}
-        hat={hat}
-        />
-        ))
-        console.error(makeCards);
+        hats={hat}
+      />
+    ));
+    console.error(makeHatCards);
+
     return (
-      <div className="Home col">
+      <div className="Home col-8 offset-2">
         <h1 className="header-title">Home</h1>
-        <div className="home-box">
-          {makeCards}
+        <div className="d-flex flex-wrap">
+          {makeHatCards}
         </div>
       </div>
     );
