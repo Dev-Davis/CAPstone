@@ -11,16 +11,13 @@ class HatsCard extends React.Component {
   render() {
     const { hats } = this.props;
     return (
-      <div className="card col-3" style={{ width: 362 }}>
+      <div className="card col-2" style={{ width: 362 }}>
         <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" />
         <div className="StuffCard col-10 offset-1">
             <div className="card-body">
-              <p className="card-title text-center">Name</p>
-              <h3 className="card-title text-center">{hats.name}</h3>
-              <p className="card-title text-center">Type</p>
-              <h3 className="card-title text-center">{hats.type}</h3>
-              <p className="card-title text-center">Color Way</p>
-              <h3 className="card-title text-center">{hats.colorWay}</h3>
+              <h5 className="card-title text-center">{hats.name}</h5>
+              <h5 className="card-title text-center">{hats.type}</h5>
+              <h5 className="card-title text-center">{hats.colorWay}</h5>
             </div>
           </div>
         </div>

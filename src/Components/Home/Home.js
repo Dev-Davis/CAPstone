@@ -29,7 +29,6 @@ class Home extends React.Component {
         hats={hat}
       />
     ));
-    console.error(makeHatCards);
 
     return (
       <div className="Home col">
