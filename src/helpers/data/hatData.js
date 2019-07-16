@@ -39,6 +39,9 @@ const getSingleHat = hatId => axios.get(`${baseUrl}/hats/${hatId}.json`);
 
 const putHat = (updatedHat, hatId) => axios.put(`${baseUrl}/hats/${hatId}.json`, updatedHat);
 
+const removeHat = hatId => axios.delete(`${baseUrl}/hats/${hatId}.json`);
+
+
 
 export default {
   getHats,
@@ -46,4 +49,5 @@ export default {
   postNewHat,
   getSingleHat,
   putHat,
+  removeHat,
 };

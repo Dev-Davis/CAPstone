@@ -56,12 +56,19 @@ class Home extends React.Component {
       .catch( err => console.error('unable to post new hat', err));
   }
 
+  deleteHat = (hatId) => {
+    hatData.removeHat(hatId)
+      .then(() => this.getHats())
+      .catch(err => console.error('unable to delete the hat', err));
+  }
+
   render() {
     const { newHat } = this.state;
     const makeHatCards = this.state.hats.map(hat => (
       <ProfileHatsCard
         key={hat.id}
         hats={hat}
+        deleteHat={this.deleteHat}
       />
     ));
 
