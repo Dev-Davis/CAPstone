@@ -33,6 +33,7 @@ class Home extends React.Component {
       <HatsCard
         key={hat.id}
         hats={hat}
+        deleteHat={this.deleteHat}
       />
     ));
 
