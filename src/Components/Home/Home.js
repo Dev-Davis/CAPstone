@@ -22,6 +22,12 @@ class Home extends React.Component {
     this.getHats();
   }
 
+  deleteHat = (hatId) => {
+    hatData.removeHat(hatId)
+      .then(() => this.getHats())
+      .catch(err => console.error('unable to delete the hat', err));
+  }
+
   render() {
     const makeHatCards = this.state.hats.map(hat => (
       <HatsCard
