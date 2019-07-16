@@ -11,7 +11,6 @@ class Single extends React.Component {
   componentDidMount() {
     const hatId = this.props.match.params.id;
     hatData.getSingleHat(hatId)
-      // .then(hatPromise => console.error(hatPromise))
       .then(hatPromise => this.setState({ hats: hatPromise.data }))
       .catch(err => console.error('no single hat elements', err));
   }
@@ -21,7 +20,6 @@ class Single extends React.Component {
     const profileLink = `back/`
     return (
       <div className="singlePage col-4 offset-4">
-      {/* <h1>Single Page</h1> */}
       <div className="card">
           <div className="card-header">
           <h1>{hats.name}</h1>
