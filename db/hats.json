@@ -5,7 +5,7 @@
       "imageUrl": "https://i.ibb.co/gwTmZZ4/i-dont-get-drunk.png",
       "type": "Trucker Hat",
       "colorWay": "Black and White",
-      "description": "Black front with white fishnet on the back. With a slightly curved black brim that says I don't get drunk, I get awesome on the front",
+      "description": "Black front with white fishnet on the back. With a slightly curved black brim quoting, 'I don't get drunk, I get awesome'",
       "uid": "8346656615"
     },
     "hat02" :{
@@ -13,7 +13,7 @@
       "imageUrl": "https://i.ibb.co/NVLtBz0/bad-decisions.png",
       "type": "Trucker Hat",
       "colorWay": "Black on Black",
-      "description": "Black front with black fishnet on the back. With a slightly curved black brim that says Pretty Good at Bad Decisions on the front",
+      "description": "Black front with black fishnet on the back. With a slightly curved black brim that quotes, 'Pretty Good at Bad Decisions'",
       "uid": "8346656615"
     },
     "hat03" :{
@@ -37,7 +37,7 @@
       "imageUrl": "https://i.ibb.co/RDQWbVK/toy-story-pizza-planet.png",
       "type": "Dad Hat",
       "colorWay": "Red",
-      "description": "A solid red hat with the Pizza Planet logo from Toy Story in white letters.",
+      "description": "A solid red hat with the Pizza Planet logo in white letters.",
       "uid": "8346656615"
     },
     "hat06" :{
@@ -45,7 +45,7 @@
       "imageUrl": "https://i.ibb.co/Z6ng3K1/stan-south-park.png",
       "type": "Dad Hat",
       "colorWay": "Tan",
-      "description": "Solid tan hat with a stitched figure of Stan from South Park on the front.",
+      "description": "Solid tan hat with a stitched figure of Stan from South Park.",
       "uid": "8346656615"
     },
     "hat07" :{
@@ -53,7 +53,7 @@
       "imageUrl": "https://i.ibb.co/wSD0fjm/single-af.png",
       "type": "Dad Hat",
       "colorWay": "Maroon",
-      "description": "A simple maroon hat that says Single AF.",
+      "description": "A simple maroon hat that says, 'Single AF'.",
       "uid": "8346656615"
     },
     "hat08" :{
@@ -61,7 +61,7 @@
       "imageUrl": "https://i.ibb.co/g7WZNVX/reptar.png",
       "type": "Dad Hat",
       "colorWay": "Black",
-      "description": "Black front with a Reptar figure stitched in the front and a slightly curved brim",
+      "description": "Black hat with a Reptar figure stitched in the front and a slightly curved brim",
       "uid": "8346656615"
     },
     "hat09" :{
@@ -69,7 +69,7 @@
       "imageUrl": "https://i.ibb.co/F6LgxTs/kyle-south-park.png",
       "type": "Dad Hat",
       "colorWay": "Blue",
-      "description": "Solid blue hat with a stiched figure of Kyle from South Park on the front.",
+      "description": "Solid blue hat with a stitched figure of Kyle from South Park.",
       "uid": "8346656615"
     },
     "hat10" :{
@@ -77,7 +77,7 @@
       "imageUrl": "https://i.ibb.co/8P1jQn6/double-dare.png",
       "type": "Dad Hat",
       "colorWay": "Red and Green",
-      "description": "Red hat with Double Darre logo stitched in the front with green slime replication drops on the brim.",
+      "description": "Red hat with Double Dare logo stitched in the front with green slime replication drops on the brim.",
       "uid": "8346656615"
     },
     "hat11" :{
@@ -85,7 +85,7 @@
       "imageUrl": "https://i.ibb.co/9gc4076/daffy-duck.png",
       "type": "Dad Hat",
       "colorWay": "Black",
-      "description": "Black hat with a stitched firgure of Daffy Duck on the front.",
+      "description": "Black hat with a stitched figure of Daffy Duck on the front.",
       "uid": "8346656615"
     },
     "hat12" :{
@@ -93,7 +93,7 @@
       "imageUrl": "https://i.ibb.co/Cvm90tV/bob-ross.png",
       "type": "Dad Hat",
       "colorWay": "White and Black",
-      "description": "Solid white hat with a black outline figure of Bob Ross stitched in the front.",
+      "description": "Solid white hat with a black outline stitched figure of Bob Ross -Happy Trees.",
       "uid": "8346656615"
     },
     "hat13" :{
@@ -117,7 +117,7 @@
       "imageUrl": "https://i.ibb.co/PmrHkYd/super-mario.png",
       "type": "Beanie",
       "colorWay": "Black",
-      "description": "Black beanie with Mario on it in traditional outfit.",
+      "description": "Black beanie with Mario on it in traditional outfit of overalls.",
       "uid": "8346656615"
     },
     "hat16" :{
@@ -153,11 +153,11 @@
       "uid": "8346656615"
     },
     "hat20" :{
-      "name": "Tazmanian Devil Lenticular Snapback",
+      "name": "Tasmanian Devil Lenticular Snapback",
       "imageUrl": "https://i.ibb.co/M2NYym2/tazz-lentic.png",
       "type": "Snapback Hat",
       "colorWay": "Red",
-      "description": "Red hat with a 90's style lenticular bill with the Tazmanian Devil character logo stitched in the front.",
+      "description": "Red hat with a 90's style lenticular bill with the Tasmanian Devil character logo stitched in the front.",
       "uid": "8346656615"
     },
     "hat21" :{
@@ -173,7 +173,7 @@
       "imageUrl": "https://i.ibb.co/DL71sS8/rocko-lentic.png",
       "type": "Snapback Hat",
       "colorWay": "Black and White",
-      "description": "A lighbt purple snapback with a 90's style matching lenticular bill and the Rocko and Spunky character stitched on the front.",
+      "description": "A light purple snapback with a 90's style matching lenticular bill and the Rocko and Spunky character stitched on the front.",
       "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
     },
     "hat23" :{
@@ -210,7 +210,7 @@
     },
     "hat27" :
     {
-      "name": "Gerald Snaoback",
+      "name": "Gerald Snapback",
       "imageUrl": "https://i.ibb.co/N2QfxZq/hey-arnold-gerald-33.png",
       "type": "Snapback Hat",
       "colorWay": "Red and White",
@@ -222,7 +222,7 @@
       "imageUrl": "https://i.ibb.co/N9qTpvz/harley-joker-kiss.png",
       "type": "Snapback Hat",
       "colorWay": "Black, White, and Purple",
-      "description": "Black snapbacl hat with a montage of Joker and Harley Quinn kissing on the front with Hahaha in a black outline on a purple bill.",
+      "description": "Black snapback hat with a montage of Joker and Harley Quinn kissing with Hahaha in a black outline on a purple bill.",
       "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
     },
     "hat29" :{
@@ -230,7 +230,7 @@
       "imageUrl": "https://i.ibb.co/bX324gJ/friday-the-13th.png",
       "type": "Snapback Hat",
       "colorWay": "Black and Red",
-      "description": "Black Friday the 13th slasher style hat with Jason's name in red, with a replica of the maak and bloodstains.",
+      "description": "Black Friday the 13th slasher style hat with Jason's name in red, with a replica of the mask and bloodstains.",
       "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
     },
     "hat30" :{
@@ -254,7 +254,7 @@
       "imageUrl": "https://i.ibb.co/jWg1knf/black-Panther-leather-logo.png",
       "type": "Snapback Hat",
       "colorWay": "Black and Black",
-      "description": "Black Panther black leather hat with the Black Panther logo on the front witha silver lining.",
+      "description": "Black Panther black leather hat with the Black Panther logo on the front with a silver lining.",
       "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
     } 
   }

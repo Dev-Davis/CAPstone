@@ -25,8 +25,8 @@ class ProfileHatsCard extends React.Component {
         {/* <Link to={...}></Link> */}
         <div className="StuffCard col-10 offset-1">
             <div className="card-body">
-              <h3 className="card-title">{hats.name}</h3>
               <Link to={singleLink}><img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" /></Link>
+              <h3 className="card-title">{hats.name}</h3>
               <p className="card-text">{hats.type}</p>
               <h5 className="card-text">{hats.colorWay}</h5>
               <Link className="btn btn-warning" to={editLink}>Edit</Link>

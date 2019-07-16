@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import hatData from '../../helpers/data/hatData';
 
@@ -17,9 +18,10 @@ class Single extends React.Component {
 
   render() {
     const { hats } = this.state;
+    const profileLink = `back/`
     return (
       <div className="singlePage col-4 offset-4">
-      <h1>Single Page</h1>
+      {/* <h1>Single Page</h1> */}
       <div className="card">
           <div className="card-header">
           <h1>{hats.name}</h1>
@@ -27,11 +29,7 @@ class Single extends React.Component {
           <div className="card-body">
             <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" />
             <h5 className="card-title">{hats.description}</h5>
-            <h4 className="card-text">Comments</h4>
-            <h4 className="card-text">...</h4>
-            <h4 className="card-text">...</h4>
-            <h4 className="card-text">...</h4>
-            <h4 className="card-text">...</h4>
+            <Link className="btn btn-warning" to={profileLink}>Back To Profile</Link>
           </div>
         </div>
     </div>
