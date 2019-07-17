@@ -1,0 +1,27 @@
+{
+  "comment1": {
+    "comment": "Pretty awesome hat!!!",
+    "leftBy": "Elliot D",
+    "date": "07-16-19",
+    "uid": "12345", 
+    "hatId": "hat1"
+  },
+  "comment2": {
+    "comment": "Where did you get that hat?",
+    "leftBy": "Dot Damn",
+    "date": "07-16-19",
+    "uid": "12345"
+  },
+  "comment3": {
+    "comment": "That's the best hat I've seen so far!!!",
+    "leftBy": "HatWorld",
+    "date": "07-16-19",
+    "uid": "12345"
+  },
+  "comment4": {
+    "comment": "How many hats do you have?",
+    "leftBy": "Lids",
+    "date": "07-16-19",
+    "uid": "12345"
+  }
+}

@@ -60,7 +60,7 @@ render() {
   return (
     <div className="MyNavbar">
       <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">CAPstone</NavbarBrand>
+          <NavbarBrand href="/" className="navTitle">CAPstone</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
