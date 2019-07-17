@@ -19,13 +19,14 @@ class ProfileHatsCard extends React.Component {
   render() {
     const { hats } = this.props;
     const editLink = `edit/${hats.id}`;
+    const singleLink = `single/${hats.id}`
     return (
       <div className="card col-3" style={{ width: 600 }}>
         {/* <Link to={...}></Link> */}
         <div className="StuffCard col-10 offset-1">
             <div className="card-body">
+              <Link to={singleLink}><img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" /></Link>
               <h3 className="card-title">{hats.name}</h3>
-              <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" />
               <p className="card-text">{hats.type}</p>
               <h5 className="card-text">{hats.colorWay}</h5>
               <Link className="btn btn-warning" to={editLink}>Edit</Link>

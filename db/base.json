@@ -1,5 +1,9 @@
 {
   "hats": "hats",
+<<<<<<< HEAD
   "profileHats": "profileHats",
   "etc": "etc"
+=======
+  "profileHats": "myHats"
+>>>>>>> 7c203831f0a785ef9b6710b30fb7713031be8b85
 }

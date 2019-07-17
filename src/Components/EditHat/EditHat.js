@@ -105,7 +105,7 @@ class Home extends React.Component {
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        <h1 className="header-title">Profile Page</h1>
+        <h1 className="header-title"> </h1>
           <div className="profile-pic">
             <img src="..." alt="..." />
           </div>

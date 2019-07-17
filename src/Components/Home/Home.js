@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HatsCard from '../HatsCard/HatsCard';
+// import HatsCard from '../HatsCard/HatsCard';
 
 import hatData from '../../helpers/data/hatData';
 
@@ -12,7 +12,7 @@ class Home extends React.Component {
   }
 
   getHats = () => {
-    hatData.getMyHats()
+    hatData.getHats()
       .then(hats => this.setState({hats}))
       .catch(err => console.error('could not get hats for home', err));
   }
@@ -29,19 +29,20 @@ class Home extends React.Component {
   }
 
   render() {
-    const makeHatCards = this.state.hats.map(hat => (
-      <HatsCard
-        key={hat.id}
-        hats={hat}
-        deleteHat={this.deleteHat}
-      />
-    ));
+    // const makeHatCards = this.state.hats.map(hat => (
+    //   <HatsCard
+    //     key={hat.id}
+    //     hats={hat}
+    //     deleteHat={this.deleteHat}
+    //   />
+    // ));
 
     return (
-      <div className="Home col">
-        <h1 className="header-title">Home</h1>
+      <div className="Home col-12">
+        <h1 className="header-title">CAPstone</h1>
+          <div>Let's turn this house into a hatty home!</div>
         <div className="d-flex flex-wrap">
-          {makeHatCards}
+          <div className="intro-bar">We have Snapbacks, Dad Hats, Beanies, and Trucker Hats</div>
         </div>
       </div>
     );

@@ -62,6 +62,11 @@ class Home extends React.Component {
       .catch(err => console.error('unable to delete the hat', err));
   }
 
+  fileSelectedHandler = (e) => {
+    e.preventDefault();
+    console.error('file was chosen', e);
+  }
+
   render() {
     const { newHat } = this.state;
     const makeHatCards = this.state.hats.map(hat => (
@@ -74,7 +79,7 @@ class Home extends React.Component {
 
     return (
       <div className="Home col-10 offset-1">
-        <form onSubmit={this.submitForm}>
+        <form className="col-4 offset-4" onSubmit={this.submitForm}>
           <div className="form-group">
             <label htmlFor="hatName">Name</label>
             <input
@@ -121,7 +126,7 @@ class Home extends React.Component {
           <div className="profile-pic">
             <img src="..." alt="..." />
           </div>
-          <div className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap col-10 offset-1">
             {makeHatCards}
           </div>
       </div>

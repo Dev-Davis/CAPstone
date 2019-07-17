@@ -1,0 +1,98 @@
+{
+  "profileHat01": {
+    "name": "Harley and Joker Snapback",
+    "imageUrl": "https://i.ibb.co/N9qTpvz/harley-joker-kiss.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black, White, and Purple",
+    "description": "Black snapback hat with a montage of Joker and Harley Quinn kissing with Hahaha in a black outline on a purple bill.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat02": {
+    "name": "Jason Voorhees Snapback",
+    "imageUrl": "https://i.ibb.co/bX324gJ/friday-the-13th.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black and Red",
+    "description": "Black Friday the 13th slasher style hat with Jason's name in red, with a replica of the mask and bloodstains.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat03": {
+    "name": "Bugs Bunny Lenticular Snapback",
+    "imageUrl": "https://i.ibb.co/hD9pk9k/bugs-lentic.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black",
+    "description": "Black hat with a 90's style matching lenticular bill with a stitched in Bugs Bunny character on the front.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat04": {
+    "name": "Black Panther Ears Snapback",
+    "imageUrl": "https://i.ibb.co/gvsFcgm/Black-Panther-ears.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black and White",
+    "description": "Black Panther leather snapback hat with classic Black Panther lining and Black Panther ears.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat05": {
+    "name": "Black Panther Logo Snapback",
+    "imageUrl": "https://i.ibb.co/jWg1knf/black-Panther-leather-logo.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black and Black",
+    "description": "Black Panther black leather hat with the Black Panther logo on the front with a silver lining.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat06": {
+    "name": "Spider-Man Snapback",
+    "imageUrl": "https://i.ibb.co/Gpj4Qb1/spiderman.png",
+    "type": "Snapback Hat",
+    "colorWay": "Red and Blue",
+    "description": "Snapback hat with traditional Spider-Man colors with a black Spider-Man logo stitched in the front.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat07": {
+    "name": "Rocko Lenticular Snapback",
+    "imageUrl": "https://i.ibb.co/DL71sS8/rocko-lentic.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black and White",
+    "description": "A light purple snapback with a 90's style matching lenticular bill and the Rocko and Spunky character stitched on the front.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat08": {
+    "name": "PlayStation Snapback",
+    "imageUrl": "https://i.ibb.co/K7mwZBH/playstation-lentic.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black and Black",
+    "description": "Black hat with a patent leather brim with the classic PlayStation letters from the controller buttons.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat09": {
+    "name": "Ouija Snapback",
+    "imageUrl": "https://i.ibb.co/CJX2KT4/ouija.png",
+    "type": "Snapback Hat",
+    "colorWay": "Black and Cream",
+    "description": "Black hat with a Planchette logo on the front with a replica of the game board as the brim.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat10": {
+    "name": "Marvin the Martian Lenticular Snapback",
+    "imageUrl": "https://i.ibb.co/Dz0tK4R/marvin-lentic.png",
+    "type": "Snapback Hat",
+    "colorWay": "Light teal",
+    "description": "Light teal snapback with a 90's style lenticular bill with the Marvin the Martian character stitched in the front.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat11": {
+    "name": "Luigi Snapback",
+    "imageUrl": "https://i.ibb.co/VpjgfrB/luigi.png",
+    "type": "Snapback Hat",
+    "colorWay": "Green and White",
+    "description": "Classic Luigi Green from the Mario Brothers series with the L logo on the front of the hat.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  },
+  "profileHat12": {
+    "name": "Atari",
+    "imageUrl": "https://i.ibb.co/QNtXV42/atari.png",
+    "type": "Trucker Hat",
+    "colorWay": "Black, White, and Red",
+    "description": "White front with black fishnet on the back. Red Atari logo with a straight red brim.",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2"
+  }
+}
