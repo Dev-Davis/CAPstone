@@ -63,8 +63,6 @@ class App extends React.Component {
         <BrowserRouter>
           <React.Fragment>
             <HatNav authed={authed} />
-            {/* <div className="container"> */}
-              <div className="row">
                 <Switch>
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
                   <PrivateRoute path='/home' component={Home} authed={authed} />
@@ -74,8 +72,6 @@ class App extends React.Component {
                   <PrivateRoute path='/back' component={Profile} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
-              </div>
-            {/* </div> */}
           </React.Fragment>
         </BrowserRouter>
       </div>
