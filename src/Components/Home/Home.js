@@ -38,12 +38,12 @@ class Home extends React.Component {
     // ));
 
     return (
-      <div className="Home col-12">
+      <div className="Home">
         <h1 className="header-title">CAPstone</h1>
           <div>Let's turn this house into a hatty home!</div>
-        <div className="d-flex flex-wrap">
+        {/* <div className="d-flex flex-wrap"> */}
           <div className="intro-bar">We have Snapbacks, Dad Hats, Beanies, and Trucker Hats</div>
-        </div>
+        {/* </div> */}
       </div>
     );
   }
