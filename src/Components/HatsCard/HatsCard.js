@@ -20,7 +20,7 @@ class HatsCard extends React.Component {
     const { hats } = this.props;
     // const singleLink = `single/${hats.id}`
     return (
-      <div className="card col-2" style={{ width: 300 }}>
+      <div className="card col-2" ref={hats.id} style={{ width: 300 }}>
        <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" />
         <div className="HatCard">
             <div className="card-body">

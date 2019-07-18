@@ -22,7 +22,6 @@ class ProfileHatsCard extends React.Component {
     const singleLink = `single/${hats.id}`
     return (
       <div className="card col-3" style={{ width: 600 }}>
-        {/* <Link to={...}></Link> */}
         <div className="StuffCard col-10 offset-1">
             <div className="card-body">
               <Link to={singleLink}><img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" /></Link>

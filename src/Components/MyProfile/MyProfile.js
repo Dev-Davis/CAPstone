@@ -68,7 +68,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { newHat } = this.state;
+    // const { newHat } = this.state;
     const makeHatCards = this.state.hats.map(hat => (
       <ProfileHatsCard
         key={hat.id}
@@ -79,7 +79,7 @@ class Home extends React.Component {
 
     return (
       <div className="Home col-10 offset-1">
-        <form className="col-4 offset-4" onSubmit={this.submitForm}>
+        {/* <form className="col-4 offset-4" onSubmit={this.submitForm}>
           <div className="form-group">
             <label htmlFor="hatName">Name</label>
             <input
@@ -121,7 +121,7 @@ class Home extends React.Component {
             onChange={this.descriptionChange}/>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+        </form> */}
         <h1 className="header-title">Profile Page</h1>
           <div className="profile-pic">
             {/* <img src="..." alt="..." /> */}
