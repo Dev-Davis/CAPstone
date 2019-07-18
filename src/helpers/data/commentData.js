@@ -1,10 +1,10 @@
 import axios from 'axios';
 import apiKeys from '../apiKeys';
 
-const baseUrl = apiKeys.firebase.databaseURL;
+const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getComments = uid => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/comments.json?orderBy="uid"&equalTo="${uid}"`)
+  axios.get(`${baseUrl}/comments.json`)
     .then((res) => {
       const comments = [];
       if (res.data !== null) {
