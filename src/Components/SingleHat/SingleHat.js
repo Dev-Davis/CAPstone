@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import profileData from '../../helpers/data/profileData';
@@ -11,6 +12,7 @@ import commentShapes from '../../helpers/propz/commentShapes';
 const  newCommentInfo = {
   userName: '',
   comment: '',
+  date: '',
 }
 
 class Single extends React.Component {
@@ -31,9 +33,7 @@ class Single extends React.Component {
   }
 
   userNameChange = e => this.stringStateField('userName', e);
-  commentChange = e => {
-    this.stringStateField('comment', e);
-  }
+  commentChange = e => {this.stringStateField('comment', e);}
 
 
   getComments = (hatId) => {
@@ -63,7 +63,13 @@ class Single extends React.Component {
 
     submitComment = (e) => {
       e.preventDefault();
-
+      const hatId = this.props.match.params.id;
+      const saveComment = { ...this.state.newComment };
+      saveComment.uid = firebase.auth().currentUser.uid;
+      saveComment.hatId = this.props.match.params.id;
+      commentData.postNewComment(saveComment)
+        .then(() => this.getComments(hatId))
+        .catch(err => console.error('unable to post comment', err));
   }
 
   
@@ -79,9 +85,9 @@ class Single extends React.Component {
     const { newComment } = this.state;
     
     return (
-      <div className="singlePage">
+      <div className="singlePage col-4 offset-4">
       <div className="card">
-          <div className="card-header">
+          <div className="card-header"></div>
           <h1>{profileHats.name}</h1>
           </div>
           <div className="card-body">
@@ -97,7 +103,7 @@ class Single extends React.Component {
                 type="text"
                 className="form-control"
                 id="userName"
-                placeholder="Adam B"
+                placeholder="John Doe"
                 value={newComment.userName}
                 onChange={this.userNameChange}/>
               </div>
@@ -115,7 +121,6 @@ class Single extends React.Component {
             </form>
           </div>
             {makeComments}
-          </div>
         </div>
     )
   }

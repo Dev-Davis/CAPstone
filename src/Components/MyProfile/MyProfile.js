@@ -42,6 +42,7 @@ class Home extends React.Component {
       .catch(err => console.error('could not get hats for home', err));
   }
 
+
   componentDidMount() {
     this.getHats();
   }

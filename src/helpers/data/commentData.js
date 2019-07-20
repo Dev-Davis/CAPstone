@@ -34,9 +34,11 @@ const getCommentByHatId = hatId => new Promise((resolve, reject) => {
 })
 
 const makeCommentsByHatId = commentData => axios.post(`${baseUrl}/comments.json`, commentData);
+const postNewComment = newComment => axios.post(`${baseUrl}/comments.json`, newComment);
 
 export default {
   getComments,
   getCommentByHatId,
   makeCommentsByHatId,
+  postNewComment,
 }
