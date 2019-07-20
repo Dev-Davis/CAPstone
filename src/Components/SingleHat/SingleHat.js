@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import profileData from '../../helpers/data/profileData';
@@ -24,11 +23,16 @@ class Single extends React.Component {
       .catch(err => console.error('could not get comments', err));
   }
 
+  makeNewComment = (hatId) => {
+    commentData.makeCommentsByHatId(hatId)
+    .then(comments => this.setState({comments}))
+    .catch(err => console.error('could not post comment', err));
+  }
+
   singleHat = () => {
     const profileHatId = this.props.match.params.id;
     profileData.getSingleProfileHat(profileHatId)
     .then(profileHatPromise => this.setState({ profileHats: profileHatPromise.data }))
-      // .then(hatPromise => console.error(hatPromise))
     .catch(err => console.error('no single hat elements', err));
   }
 
@@ -45,7 +49,6 @@ class Single extends React.Component {
 
   
   render() {
-    // const i = this.props.hats.findIndex(hat => )
     const { profileHats } = this.state;
     const profileLink = `/profile`;
     const makeComments = this.state.comments.map(comment => (
@@ -53,7 +56,7 @@ class Single extends React.Component {
         key={comment.id}
         comment={comment}
       />
-    ));    
+    ));
     
     return (
       <div className="singlePage">
@@ -65,6 +68,9 @@ class Single extends React.Component {
             <img src={profileHats.imageUrl} className="card-img-top" alt="Pic of a hat" />
             <h5 className="card-title">{profileHats.description}</h5>
             <Link className="btn btn-dark" to={profileLink}>Back To Profile</Link>
+          </div>
+          <div className="commentArea">
+
           </div>
             {makeComments}
           </div>
