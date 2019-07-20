@@ -7,15 +7,34 @@ import commentData from '../../helpers/data/commentData';
 import CommentCard from '../Comments/Comments';
 
 import commentShapes from '../../helpers/propz/commentShapes';
+
+const  newCommentInfo = {
+  userName: '',
+  comment: '',
+}
+
 class Single extends React.Component {
   state = {
     profileHats: {},
     comments: [],
+    newComment: newCommentInfo,
   }
 
   static propTypes = {
     comments: commentShapes.commentShapes,
   }
+
+  stringStateField = (name, e) => {
+    const copyComment = { ...this.state.newComment };
+    copyComment[name] = e.target.value;
+    this.setState({ newComment: copyComment });
+  }
+
+  userNameChange = e => this.stringStateField('userName', e);
+  commentChange = e => {
+    this.stringStateField('comment', e);
+  }
+
 
   getComments = (hatId) => {
     commentData.getCommentByHatId(hatId)
@@ -44,7 +63,7 @@ class Single extends React.Component {
 
     submitComment = (e) => {
       e.preventDefault();
-      console.error('you left a comment');
+
   }
 
   
@@ -57,6 +76,7 @@ class Single extends React.Component {
         comment={comment}
       />
     ));
+    const { newComment } = this.state;
     
     return (
       <div className="singlePage">
@@ -70,7 +90,29 @@ class Single extends React.Component {
             <Link className="btn btn-dark" to={profileLink}>Back To Profile</Link>
           </div>
           <div className="commentArea">
-
+            <form className="#" onSubmit={this.submitComment}>
+              <div className="form-group">
+                <label htmlFor="userName">Username</label>
+                <input
+                type="text"
+                className="form-control"
+                id="userName"
+                placeholder="Adam B"
+                value={newComment.userName}
+                onChange={this.userNameChange}/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="comment">Comment</label>
+                <input
+                type="text"
+                className="form-control"
+                id="comment"
+                placeholder="That hat is wicked!"
+                value={newComment.comment}
+                onChange={this.commentChange}/>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
           </div>
             {makeComments}
           </div>
