@@ -13,7 +13,7 @@ class Auth extends React.Component {
 
   render() {
     return (
-      <div className="Auth col-10 offset-1">
+      <div className="Auth">
         <h1 className="loginAuth">CAPstonee</h1>
         <h5 className="loginAuth">"Every hat needs a home"</h5>
         <button className="btn btn-secondary" onClick={this.loginClickEvent}>Log In!</button>

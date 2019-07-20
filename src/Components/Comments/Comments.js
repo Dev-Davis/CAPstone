@@ -14,16 +14,14 @@ class CommentCard extends React.Component {
   }
 
   render() {
-    const { comments } = this.props;
     const commentId = this.props.comment.id;
-    console.error(comments);
     return (
       <div>
-        <div class="card w-95" ref={commentId}>
-          <div class="card-body">
-            <h5 class="card-title">{this.props.comment.leftBy}</h5>
-            <p class="card-text">{this.props.comment.comment}</p>
-            <p class="card-text">{this.props.comment.date}</p>
+        <div className="card w-95" ref={commentId}>
+          <div className="card-body">
+            <h5 className="card-title">{this.props.comment.username}</h5>
+            <p className="card-text">{this.props.comment.comment}</p>
+            <p className="card-text">{this.props.comment.date}</p>
           </div>
         </div>
       </div>

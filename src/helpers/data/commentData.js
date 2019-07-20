@@ -18,6 +18,22 @@ const getComments = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 })
 
+const getCommentByHatId = hatId => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/comments.json?orderBy="hatId"&equalTo="${hatId}"`)
+    .then((res) => {
+      const commentResults = res.data;
+      const comments = [];
+      Object.keys(commentResults).forEach((hatId) => {
+        commentResults[hatId].id = hatId;
+        commentResults[hatId].commentId = hatId;
+        comments.push(commentResults[hatId]);
+      })
+      resolve(comments);
+    })
+    .catch(err => reject(err));
+})
+
 export default {
   getComments,
+  getCommentByHatId,
 }

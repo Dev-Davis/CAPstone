@@ -18,9 +18,8 @@ class Single extends React.Component {
     comments: commentShapes.commentShapes,
   }
 
-  getComments = () => {
-    // const { uid } = firebase.auth().currentUser;
-    commentData.getComments()
+  getComments = (hatId) => {
+    commentData.getCommentByHatId(hatId)
       .then(comments => this.setState({comments}))
       .catch(err => console.error('could not get comments', err));
   }
@@ -34,7 +33,8 @@ class Single extends React.Component {
   }
 
   componentDidMount() {
-    this.getComments();
+    const profileHatId = this.props.match.params.id;
+    this.getComments(profileHatId);
     this.singleHat();
   }
 
@@ -47,16 +47,16 @@ class Single extends React.Component {
   render() {
     // const i = this.props.hats.findIndex(hat => )
     const { profileHats } = this.state;
-    const profileLink = `/back`;
+    const profileLink = `/profile`;
     const makeComments = this.state.comments.map(comment => (
       <CommentCard
         key={comment.id}
         comment={comment}
       />
-    ));
+    ));    
     
     return (
-      <div className="singlePage col-4 offset-4">
+      <div className="singlePage">
       <div className="card">
           <div className="card-header">
           <h1>{profileHats.name}</h1>
