@@ -125,7 +125,7 @@ class Home extends React.Component {
           <div className="profile-pic">
             {/* <img src="..." alt="..." /> */}
           </div>
-          <div className="">
+          <div className="d-flex flex-wrap">
             {makeHatCards}
           </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+// import moment from 'moment';
 
 import profileData from '../../helpers/data/profileData';
 import commentData from '../../helpers/data/commentData';
@@ -10,7 +11,7 @@ import CommentCard from '../Comments/Comments';
 import commentShapes from '../../helpers/propz/commentShapes';
 
 const  newCommentInfo = {
-  userName: '',
+  username: '',
   comment: '',
   date: '',
 }
@@ -32,22 +33,14 @@ class Single extends React.Component {
     this.setState({ newComment: copyComment });
   }
 
-  userNameChange = e => this.stringStateField('userName', e);
+  usernameChange = e => this.stringStateField('username', e);
   commentChange = e => {this.stringStateField('comment', e);}
-
 
   getComments = (hatId) => {
     commentData.getCommentByHatId(hatId)
       .then(comments => this.setState({comments}))
       .catch(err => console.error('could not get comments', err));
   }
-
-  makeNewComment = (hatId) => {
-    commentData.makeCommentsByHatId(hatId)
-    .then(comments => this.setState({comments}))
-    .catch(err => console.error('could not post comment', err));
-  }
-
   singleHat = () => {
     const profileHatId = this.props.match.params.id;
     profileData.getSingleProfileHat(profileHatId)
@@ -98,14 +91,14 @@ class Single extends React.Component {
           <div className="commentArea">
             <form className="#" onSubmit={this.submitComment}>
               <div className="form-group">
-                <label htmlFor="userName">Username</label>
+                <label htmlFor="username">Username</label>
                 <input
                 type="text"
                 className="form-control"
-                id="userName"
-                placeholder="John Doe"
-                value={newComment.userName}
-                onChange={this.userNameChange}/>
+                id="username"
+                placeholder="username"
+                value={newComment.username}
+                onChange={this.usernameChange}/>
               </div>
               <div className="form-group">
                 <label htmlFor="comment">Comment</label>
@@ -113,7 +106,7 @@ class Single extends React.Component {
                 type="text"
                 className="form-control"
                 id="comment"
-                placeholder="That hat is wicked!"
+                placeholder="Your comment..."
                 value={newComment.comment}
                 onChange={this.commentChange}/>
               </div>
