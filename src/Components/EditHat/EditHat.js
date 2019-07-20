@@ -19,7 +19,7 @@ class Home extends React.Component {
     newHat: defaultHatInfo,
   }
 
-  /* Changs ht e state fore the strings in each category
+  /* Changes the state fore the strings in each category
   for adding then to the page */
 
   stringStateField = (name, e) => {
@@ -61,7 +61,7 @@ class Home extends React.Component {
     ));
 
     return (
-      <div className="Home col-10 offset-1">
+      <div className="Home">
         <form onSubmit={this.submitForm}>
           <div className="form-group">
             <label htmlFor="hatName">Name</label>
@@ -79,7 +79,7 @@ class Home extends React.Component {
             type="text"
             className="form-control"
             id="hatType"
-            placeholder="Snpaback"
+            placeholder="Snapback"
             value={newHat.type}
             onChange={this.typeChange}/>
           </div>

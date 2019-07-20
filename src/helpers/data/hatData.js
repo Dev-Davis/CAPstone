@@ -3,8 +3,8 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getHats = uid => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/hats.json?orderBy="uid"&equalTo="${uid}"`)
+const getHats = hatId => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/hats.json?orderBy="uid"&equalTo="${hatId}"`)
     .then((res) => {
       const hats = [];
       if (res.data !== null) {

@@ -21,8 +21,8 @@ class ProfileHatsCard extends React.Component {
     const editLink = `edit/${hats.id}`;
     const singleLink = `single/${hats.id}`
     return (
-      <div className="card col-3" style={{ width: 600 }}>
-        <div className="StuffCard col-10 offset-1">
+      <div className="card" ref={hats.id} style={{ width: 600 }}>
+        <div className="HatCard">
             <div className="card-body">
               <Link to={singleLink}><img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" /></Link>
               <h3 className="card-title">{hats.name}</h3>

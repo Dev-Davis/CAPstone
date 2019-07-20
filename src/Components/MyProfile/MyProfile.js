@@ -21,8 +21,8 @@ class Home extends React.Component {
     newHat: defaultHatInfo,
   }
 
-  /* Changs ht e state fore the strings in each category
-  for adding then to the page */
+  /* Changes the state for the strings in each category
+  for adding them to the page */
 
   stringStateField = (name, e) => {
     const copyHats = { ...this.state.newHat };
@@ -64,11 +64,10 @@ class Home extends React.Component {
 
   fileSelectedHandler = (e) => {
     e.preventDefault();
-    console.error('file was chosen', e);
   }
 
   render() {
-    // const { newHat } = this.state;
+    const { newHat } = this.state;
     const makeHatCards = this.state.hats.map(hat => (
       <ProfileHatsCard
         key={hat.id}
@@ -78,8 +77,8 @@ class Home extends React.Component {
     ));
 
     return (
-      <div className="Home col-10 offset-1">
-        {/* <form className="col-4 offset-4" onSubmit={this.submitForm}>
+      <div className="Home">
+        <form className="#" onSubmit={this.submitForm}>
           <div className="form-group">
             <label htmlFor="hatName">Name</label>
             <input
@@ -96,7 +95,7 @@ class Home extends React.Component {
             type="text"
             className="form-control"
             id="hatType"
-            placeholder="Snpaback"
+            placeholder="Snapback"
             value={newHat.type}
             onChange={this.typeChange}/>
           </div>
@@ -106,7 +105,7 @@ class Home extends React.Component {
             type="text"
             className="form-control"
             id="colorWay"
-            placeholder="Black nad Yellow"
+            placeholder="Black and Yellow"
             value={newHat.colorWay}
             onChange={this.colorWayChange}/>
           </div>
@@ -121,12 +120,12 @@ class Home extends React.Component {
             onChange={this.descriptionChange}/>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
-        </form> */}
+        </form>
         <h1 className="header-title">Profile Page</h1>
           <div className="profile-pic">
             {/* <img src="..." alt="..." /> */}
           </div>
-          <div className="d-flex flex-wrap col-10 offset-1">
+          <div className="">
             {makeHatCards}
           </div>
       </div>
