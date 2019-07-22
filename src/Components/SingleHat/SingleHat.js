@@ -61,6 +61,7 @@ class Single extends React.Component {
     saveComment.date = date;
     commentData.postNewComment(saveComment)
     .then(() => this.getComments(hatId))
+    // To clear the form after submitting
     this.setState({ 
       username: '',
       comment: '',
