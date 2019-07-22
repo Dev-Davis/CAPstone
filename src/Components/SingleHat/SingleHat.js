@@ -61,6 +61,10 @@ class Single extends React.Component {
     saveComment.date = date;
     commentData.postNewComment(saveComment)
     .then(() => this.getComments(hatId))
+    this.setState({ 
+      username: '',
+      comment: '',
+    })
   }
   
   componentDidMount() {
