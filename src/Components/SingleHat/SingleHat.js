@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-// import moment from 'moment';
+import moment from 'moment';
 
 import profileData from '../../helpers/data/profileData';
 import commentData from '../../helpers/data/commentData';
@@ -21,6 +21,8 @@ class Single extends React.Component {
     profileHats: {},
     comments: [],
     newComment: newCommentInfo,
+    // username: '',
+    // comment: '',
   }
 
   static propTypes = {
@@ -36,6 +38,7 @@ class Single extends React.Component {
   usernameChange = e => this.stringStateField('username', e);
   commentChange = e => {this.stringStateField('comment', e);}
 
+  // This is where you assign comments to certain hats
   getComments = (hatId) => {
     commentData.getCommentByHatId(hatId)
       .then(comments => this.setState({comments}))
@@ -47,25 +50,30 @@ class Single extends React.Component {
     .then(profileHatPromise => this.setState({ profileHats: profileHatPromise.data }))
     .catch(err => console.error('no single hat elements', err));
   }
-
+  
+  submitComment = (e) => {
+    e.preventDefault();
+    const hatId = this.props.match.params.id;
+    const saveComment = { ...this.state.newComment };
+    const date = moment().calendar();
+    saveComment.uid = firebase.auth().currentUser.uid;
+    saveComment.hatId = this.props.match.params.id;
+    saveComment.date = date;
+    commentData.postNewComment(saveComment)
+    .then(() => this.getComments(hatId))
+  }
+  
   componentDidMount() {
     const profileHatId = this.props.match.params.id;
     this.getComments(profileHatId);
     this.singleHat();
   }
 
-    submitComment = (e) => {
-      e.preventDefault();
-      const hatId = this.props.match.params.id;
-      const saveComment = { ...this.state.newComment };
-      saveComment.uid = firebase.auth().currentUser.uid;
-      saveComment.hatId = this.props.match.params.id;
-      commentData.postNewComment(saveComment)
-        .then(() => this.getComments(hatId))
-        .catch(err => console.error('unable to post comment', err));
+  editComment = (e) => {
+    console.error('hi');
   }
 
-  
+  // Passing the comment card and the function into the render
   render() {
     const { profileHats } = this.state;
     const profileLink = `/profile`;
@@ -73,9 +81,10 @@ class Single extends React.Component {
       <CommentCard
         key={comment.id}
         comment={comment}
+        editComment={this.editComment}
       />
     ));
-    const { newComment } = this.state;
+    // const { comments } = this.state;
     
     return (
       <div className="singlePage col-4 offset-4">
@@ -88,16 +97,16 @@ class Single extends React.Component {
             <h5 className="card-title">{profileHats.description}</h5>
             <Link className="btn btn-dark" to={profileLink}>Back To Profile</Link>
           </div>
-          <div className="commentArea">
+          <div className="commentForm">
             <form className="#" onSubmit={this.submitComment}>
               <div className="form-group">
                 <label htmlFor="username">Username</label>
                 <input
                 type="text"
                 className="form-control"
-                id="username"
+                ref="username"
                 placeholder="username"
-                value={newComment.username}
+                value={this.state.username}
                 onChange={this.usernameChange}/>
               </div>
               <div className="form-group">
@@ -105,12 +114,12 @@ class Single extends React.Component {
                 <input
                 type="text"
                 className="form-control"
-                id="comment"
+                ref="comment"
                 placeholder="Your comment..."
-                value={newComment.comment}
+                value={this.state.comment}
                 onChange={this.commentChange}/>
               </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary">Comment</button>
             </form>
           </div>
             {makeComments}
