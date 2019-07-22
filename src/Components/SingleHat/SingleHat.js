@@ -55,7 +55,7 @@ class Single extends React.Component {
     e.preventDefault();
     const hatId = this.props.match.params.id;
     const saveComment = { ...this.state.newComment };
-    const date = moment().add(10, 'days').calendar();
+    const date = moment().calendar();
     saveComment.uid = firebase.auth().currentUser.uid;
     saveComment.hatId = this.props.match.params.id;
     saveComment.date = date;
@@ -128,14 +128,3 @@ class Single extends React.Component {
   }
 }
 export default Single;
-
-// submitComment = (e) => {
-//   e.preventDefault();
-//   const hatId = this.props.match.params.id;
-//   const saveComment = { ...this.state.newComment };
-//   saveComment.uid = firebase.auth().currentUser.uid;
-//   saveComment.hatId = this.props.match.params.id;
-//   commentData.postNewComment(saveComment)
-//   .then(() => this.getComments(hatId))
-//   .catch(err => console.error('unable to post comment', err));
-// }
