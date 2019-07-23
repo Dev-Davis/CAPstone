@@ -21,8 +21,6 @@ class Single extends React.Component {
     profileHats: {},
     comments: [],
     newComment: newCommentInfo,
-    // username: '',
-    // comment: '',
   }
 
   static propTypes = {
@@ -61,6 +59,11 @@ class Single extends React.Component {
     saveComment.date = date;
     commentData.postNewComment(saveComment)
     .then(() => this.getComments(hatId))
+     // To clear the form after submission
+     this.setState({ 
+      username: '',
+      comment: '',
+    })
   }
   
   componentDidMount() {
@@ -70,7 +73,15 @@ class Single extends React.Component {
   }
 
   editComment = (e) => {
-    console.error('hi');
+    // console.log('edit button', e);
+    const commentId = this.state.comments.id;
+    commentData.getSingleComment(commentId)
+      .then(commentPromise => this.setState({ stuff: commentPromise.data }))
+      .catch(err => console.error('can not get comment', err));
+  }
+
+  updateComment = (e) => {
+    console.log('update button', e);
   }
 
   // Passing the comment card and the function into the render
@@ -84,7 +95,6 @@ class Single extends React.Component {
         editComment={this.editComment}
       />
     ));
-    // const { comments } = this.state;
     
     return (
       <div className="singlePage col-4 offset-4">
@@ -98,10 +108,11 @@ class Single extends React.Component {
             <Link className="btn btn-dark" to={profileLink}>Back To Profile</Link>
           </div>
           <div className="commentForm">
-            <form className="#" onSubmit={this.submitComment}>
+            <form className="#">
               <div className="form-group">
                 <label htmlFor="username">Username</label>
                 <input
+                name="username"
                 type="text"
                 className="form-control"
                 ref="username"
@@ -112,6 +123,7 @@ class Single extends React.Component {
               <div className="form-group">
                 <label htmlFor="comment">Comment</label>
                 <input
+                name="comment"
                 type="text"
                 className="form-control"
                 ref="comment"
@@ -119,7 +131,9 @@ class Single extends React.Component {
                 value={this.state.comment}
                 onChange={this.commentChange}/>
               </div>
-              <button type="submit" className="btn btn-primary">Comment</button>
+              <div className="commentForm">
+                <button type="submit" className="btn btn-primary" onClick={this.submitComment}>Comment</button>
+              </div>
             </form>
           </div>
             {makeComments}
