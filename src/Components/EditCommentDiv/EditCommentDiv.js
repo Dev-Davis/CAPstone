@@ -19,6 +19,11 @@ class EditForm extends React.Component {
     }));
   }
 
+  updateComment = (e) => {
+    e.preventDefault();
+    console.error('hi');
+  }
+
   render() {
     return (
       <div>
@@ -35,17 +40,17 @@ class EditForm extends React.Component {
                 className="form-control"
                 ref="comment"
                 placeholder="Your comment..."
-                value={this.props.comment.comment}
+                defaultValue={this.props.comment.comment}
                 onChange={this.commentChange}/>
               </div>
               <div className="commentForm">
-                <button type="submit" className="btn btn-primary" onClick={this.submitComment}>Comment</button>
+                {/* <button type="submit" className="btn btn-primary" onClick={this.submitComment}>Comment</button> */}
               </div>
             </form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Update</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+            <Button color="primary" onClick={this.updateComment}>Update</Button>{' '}
+            <Button color="secondary" onClick={this.toggle}  onSubmit={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
       </div>

@@ -21,6 +21,8 @@ class Single extends React.Component {
     profileHats: {},
     comments: [],
     newComment: newCommentInfo,
+    username: '',
+    comment: ''
   }
 
   static propTypes = {
@@ -35,6 +37,16 @@ class Single extends React.Component {
 
   usernameChange = e => this.stringStateField('username', e);
   commentChange = e => {this.stringStateField('comment', e);}
+
+  usernameChange = (e) => {
+    e.preventDefault();
+    this.setState({ username: e.target.value })
+  }
+  
+  commentChange = (e) => {
+    e.preventDefault();
+    this.setState({ comment: e.target.value })
+  }
 
   // This is where you assign comments to certain hats
   getComments = (hatId) => {
@@ -54,9 +66,13 @@ class Single extends React.Component {
     const hatId = this.props.match.params.id;
     const saveComment = { ...this.state.newComment };
     const date = moment().calendar();
+    const username = firebase.auth().currentUser;
+    const comment = this.state.comment;
     saveComment.uid = firebase.auth().currentUser.uid;
     saveComment.hatId = this.props.match.params.id;
     saveComment.date = date;
+    saveComment.username = username;
+    saveComment.comment = comment;
     commentData.postNewComment(saveComment)
     .then(() => this.getComments(hatId))
      // To clear the form after submission
@@ -72,13 +88,9 @@ class Single extends React.Component {
     this.singleHat();
   }
 
-  editComment = (e) => {
-    // console.log('edit button', e);
-    const commentId = this.state.comments.id;
-    commentData.getSingleComment(commentId)
-      .then(commentPromise => this.setState({ stuff: commentPromise.data }))
-      .catch(err => console.error('can not get comment', err));
-  }
+  // editComment = (e) => {
+  //   console.log('edit button', e);
+  // }
 
   updateComment = (e) => {
     console.log('update button', e);
@@ -92,7 +104,7 @@ class Single extends React.Component {
       <CommentCard
         key={comment.id}
         comment={comment}
-        editComment={this.editComment}
+        // editComment={this.editComment}
       />
     ));
     
@@ -112,10 +124,9 @@ class Single extends React.Component {
               <div className="form-group">
                 <label htmlFor="username">Username</label>
                 <input
-                name="username"
                 type="text"
                 className="form-control"
-                ref="username"
+                name="username"
                 placeholder="username"
                 value={this.state.username}
                 onChange={this.usernameChange}/>
@@ -123,10 +134,9 @@ class Single extends React.Component {
               <div className="form-group">
                 <label htmlFor="comment">Comment</label>
                 <input
-                name="comment"
                 type="text"
                 className="form-control"
-                ref="comment"
+                name="comment"
                 placeholder="Your comment..."
                 value={this.state.comment}
                 onChange={this.commentChange}/>

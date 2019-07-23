@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import EditForm from '../EditCommentDiv/EditCommentDiv';
 
@@ -9,17 +9,18 @@ import commentShapes from '../../helpers/propz/commentShapes';
 class CommentCard extends React.Component {
   static propTypes = {
     comments: commentShapes.commentShapes,
-    editComment: PropTypes.func.isRequired,
+    // editComment: PropTypes.func.isRequired,
   }
 
-  editComment = (e) => {
+  // editComment = (e) => {
+  //   e.preventDefault();
+  //   const { comment, editComment } = this.props;
+  //   editComment(comment.id);
+  // }
+
+  updateComment = (e) => {
     e.preventDefault();
-    const { comment, editComment } = this.props;
-    editComment(comment.id);
-  }
-
-  updateComment = (commentId, updateComment) => {
-    console.log(commentId, updateComment);
+    console.error('update button');
   }
 
   render() {
@@ -35,6 +36,7 @@ class CommentCard extends React.Component {
             <div>
               <EditForm 
               comment={this.props.comment}
+              updateComment={this.updateComment}
               />
             </div>
           </div>
