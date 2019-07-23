@@ -21,8 +21,6 @@ class Single extends React.Component {
     profileHats: {},
     comments: [],
     newComment: newCommentInfo,
-    // username: '',
-    // comment: '',
   }
 
   static propTypes = {
@@ -61,8 +59,13 @@ class Single extends React.Component {
     saveComment.date = date;
     commentData.postNewComment(saveComment)
     .then(() => this.getComments(hatId))
+    // To clear the form after submission
+    this.setState({ 
+      username: '',
+      comment: '',
+    })
   }
-  
+
   componentDidMount() {
     const profileHatId = this.props.match.params.id;
     this.getComments(profileHatId);
@@ -84,7 +87,6 @@ class Single extends React.Component {
         editComment={this.editComment}
       />
     ));
-    // const { comments } = this.state;
     
     return (
       <div className="singlePage col-4 offset-4">

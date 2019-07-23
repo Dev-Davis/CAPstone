@@ -23,8 +23,8 @@ class CommentCard extends React.Component {
       <div>
         <div className="card w-95" ref={commentId}>
           <div className="card-body">
-            <h5 className="card-title">{this.props.comment.username}</h5>
-            <p className="card-text">{this.props.comment.comment}</p>
+            <h4 className="card-title">{this.props.comment.username}</h4>
+            <h5 className="card-text">{this.props.comment.comment}</h5>
             <p className="card-text">{this.props.comment.date}</p>
             <Link className="btn btn-warning" onClick={this.editComment} to={singleLink}>Edit</Link>
           </div>
