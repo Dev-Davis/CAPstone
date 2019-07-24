@@ -69,7 +69,6 @@ class App extends React.Component {
                   <PrivateRoute path='/edit/:id' component={EditHat} authed={authed} />
                   <PrivateRoute path='/single/:id' component={SingleHat} authed={authed} />
                   <PrivateRoute path='/profile' component={Profile} authed={authed} />
-                  {/* <PrivateRoute path='/back' component={Profile} authed={authed} /> */}
                   <Redirect from="*" to="/auth" />
                 </Switch>
           </React.Fragment>
