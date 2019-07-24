@@ -33,6 +33,8 @@ class Home extends React.Component {
   colorWayChange = e => this.stringStateField('colorWay', e);
   descriptionChange = e => this.stringStateField('description', e);
 
+
+  // gets data back for the form in edit
   componentDidMount() {
     const hatId = this.props.match.params.id;
     hatData.getSingleHat(hatId)
@@ -45,9 +47,8 @@ class Home extends React.Component {
     e.preventDefault();
     const saveHat = { ...this.state.newHat };
     const hatId = this.props.match.params.id;
-    console.error('wtf', hatId);
     hatData.putHat(saveHat, hatId)
-      .then(() => this.props.history.push('/profile'))
+      .then(() => this.props.history.push('/profile/'))
       .catch( err => console.error('unable to post new hat', err));
   }
 
@@ -107,7 +108,6 @@ class Home extends React.Component {
         </form>
         <h1 className="header-title"> </h1>
           <div className="profile-pic">
-            <img src="..." alt="..." />
           </div>
           <div className="d-flex flex-wrap">
             {makeHatCards}
