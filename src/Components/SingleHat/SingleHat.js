@@ -66,7 +66,7 @@ class Single extends React.Component {
     const hatId = this.props.match.params.id;
     const saveComment = { ...this.state.newComment };
     const date = moment().calendar();
-    const username = firebase.auth().currentUser;
+    const username = firebase.auth().currentUser.displayName;
     const comment = this.state.comment;
     saveComment.uid = firebase.auth().currentUser.uid;
     saveComment.hatId = this.props.match.params.id;
@@ -88,9 +88,9 @@ class Single extends React.Component {
     this.singleHat();
   }
 
-  // editComment = (e) => {
-  //   console.log('edit button', e);
-  // }
+  editComment = (e) => {
+    console.log('edit button', e);
+  }
 
   updateComment = (e) => {
     console.log('update button', e);
@@ -104,7 +104,7 @@ class Single extends React.Component {
       <CommentCard
         key={comment.id}
         comment={comment}
-        // editComment={this.editComment}
+        editComment={this.editComment}
       />
     ));
     
@@ -121,16 +121,6 @@ class Single extends React.Component {
           </div>
           <div className="commentForm">
             <form className="#">
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input
-                type="text"
-                className="form-control"
-                name="username"
-                placeholder="username"
-                value={this.state.username}
-                onChange={this.usernameChange}/>
-              </div>
               <div className="form-group">
                 <label htmlFor="comment">Comment</label>
                 <input
@@ -152,3 +142,4 @@ class Single extends React.Component {
   }
 }
 export default Single;
+

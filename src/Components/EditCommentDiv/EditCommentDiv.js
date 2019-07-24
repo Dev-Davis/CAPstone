@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class EditForm extends React.Component {
+class EditCommentDiv extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,6 +22,7 @@ class EditForm extends React.Component {
   updateComment = (e) => {
     e.preventDefault();
     console.error('hi');
+    this.toggle();
   }
 
   render() {
@@ -58,4 +59,4 @@ class EditForm extends React.Component {
   }
 }
 
-export default EditForm;
+export default EditCommentDiv;
