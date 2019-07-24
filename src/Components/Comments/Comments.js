@@ -22,8 +22,8 @@ class CommentCard extends React.Component {
       <div>
         <div className="card w-95">
           <div className="card-body">
-            <h5 className="card-title">{this.props.comment.username}</h5>
-            <p className="card-text">{this.props.comment.comment}</p>
+            <h4 className="card-title">{this.props.comment.username}</h4>
+            <h5 className="card-text">{this.props.comment.comment}</h5>
             <p className="card-text">{this.props.comment.date}</p>
             <EditCommentDiv
             comment={this.props.comment}

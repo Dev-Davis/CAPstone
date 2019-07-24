@@ -81,7 +81,7 @@ class Single extends React.Component {
       comment: '',
     })
   }
-  
+
   componentDidMount() {
     const profileHatId = this.props.match.params.id;
     this.getComments(profileHatId);
