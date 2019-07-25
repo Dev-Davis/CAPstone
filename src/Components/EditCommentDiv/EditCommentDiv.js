@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 // import commentData from '../../helpers/data/commentData';
 
 import commentShapes from '../../helpers/propz/commentShapes';
+// import commentData from '../../helpers/data/commentData';
 
 class EditCommentDiv extends React.Component {
   constructor(props) {

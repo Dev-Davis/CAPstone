@@ -95,6 +95,12 @@ class Single extends React.Component {
     .catch(err => console.error(err));
   }
 
+  removeComment = (commentId) => {
+    commentData.deleteComment(commentId)
+    .then(() => this.getComments())
+    .catch(err => console.error('cannot delete comment', err)); 
+  }
+
   // Passing the comment card and the function into the render
   render() {
     const { profileHats } = this.state;
@@ -105,6 +111,7 @@ class Single extends React.Component {
         comment={comment}
         getComments={this.getComments}
         updateComment={this.updateComment}
+        removeComment={this.removeComment}
       />
     ));
     
