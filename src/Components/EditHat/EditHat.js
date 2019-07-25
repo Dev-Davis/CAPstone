@@ -48,7 +48,7 @@ class Home extends React.Component {
     const saveHat = { ...this.state.newHat };
     const hatId = this.props.match.params.id;
     hatData.putHat(saveHat, hatId)
-      .then(() => this.props.history.push('/profile/'))
+      .then(() => this.props.history.push('/profile'))
       .catch( err => console.error('unable to post new hat', err));
   }
 

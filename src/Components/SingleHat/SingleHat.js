@@ -88,12 +88,11 @@ class Single extends React.Component {
     this.singleHat();
   }
 
-  editComment = (e) => {
-    console.log('edit button', e);
-  }
-
-  updateComment = (e) => {
-    console.log('update button', e);
+  updateComment = (saveComment, commentId) => {
+    const profileHatId = this.props.match.params.id;
+    commentData.updateComment(saveComment, commentId)
+    .then(() => this.getComments(profileHatId))
+    .catch(err => console.error(err));
   }
 
   // Passing the comment card and the function into the render
@@ -104,7 +103,8 @@ class Single extends React.Component {
       <CommentCard
         key={comment.id}
         comment={comment}
-        editComment={this.editComment}
+        getComments={this.getComments}
+        updateComment={this.updateComment}
       />
     ));
     

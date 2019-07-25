@@ -7,15 +7,15 @@ import commentShapes from '../../helpers/propz/commentShapes';
 
 class CommentCard extends React.Component {
   static propTypes = {
-    comments: commentShapes.commentShapes,
-    editComment: PropTypes.func.isRequired,
+    comment: commentShapes.commentShapes,
+    updateComment: PropTypes.func.isRequired,
   }
 
-  editComment = (e) => {
-    e.preventDefault();
-    const { comment, editComment } = this.props;
-    editComment(comment.id);
-  }
+  // editComment = (e) => {
+  //   e.preventDefault();
+  //   const { comment, editComment } = this.props;
+  //   editComment(comment.id);
+  // }
 
   render() {
     return (
@@ -27,6 +27,7 @@ class CommentCard extends React.Component {
             <p className="card-text">{this.props.comment.date}</p>
             <EditCommentDiv
             comment={this.props.comment}
+            updateComment= {this.props.updateComment}
             />
           </div>
         </div>
