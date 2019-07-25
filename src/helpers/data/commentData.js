@@ -37,6 +37,7 @@ const makeCommentsByHatId = commentData => axios.post(`${baseUrl}/comments.json`
 const postNewComment = newComment => axios.post(`${baseUrl}/comments.json`, newComment);
 const getSingleComment = commentId => axios.get(`${baseUrl}/comments/${commentId}.json`);
 const updateComment = (saveComment, commentId) => axios.put(`${baseUrl}/comments/${commentId}.json`, saveComment);
+const deleteComment = commentId => axios.delete(`${baseUrl}/comments/${commentId}.json`);
 
 export default {
   getComments,
@@ -45,4 +46,5 @@ export default {
   postNewComment,
   getSingleComment,
   updateComment,
+  deleteComment,
 }
