@@ -10,6 +10,8 @@ import CommentCard from '../Comments/Comments';
 
 import commentShapes from '../../helpers/propz/commentShapes';
 
+import './SingleHat.scss';
+
 const  newCommentInfo = {
   username: '',
   comment: '',
@@ -116,10 +118,10 @@ class Single extends React.Component {
     ));
     
     return (
-      <div className="singlePage col-4 offset-4">
+      <div className="singlePage">
       <div className="card">
           <div className="card-header"></div>
-          <h1>{profileHats.name}</h1>
+          <h1 className="text-center">{profileHats.name}</h1>
           </div>
           <div className="card-body">
             <img src={profileHats.imageUrl} className="card-img-top" alt="Pic of a hat" />
