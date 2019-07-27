@@ -12,7 +12,7 @@ class Auth extends React.Component {
   loginClickEvent = (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithEmailAndPassword(provider);
+    firebase.auth().signInWithPopup(provider);
   };
 
   render() {
