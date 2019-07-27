@@ -79,71 +79,73 @@ class Home extends React.Component {
         //   {/* <img src="..." alt="..." /> */}
         // </div>
       <div className="#">
-        <img src="#" alt="profile-pic"/>
         <div className="container">
-          <form className="" onSubmit={this.submitForm}>
-            <div className="upload-group">
-              <label htmlFor="uploadFile"></label>
-              <input
-                type="file"
-                className="upload-group"
-                id="uploadFile"
-                // placeholder="Batman Snapback"
-                value={newHat.name}
-                onChange={this.nameChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="hatName">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="hatName"
-                placeholder="Batman Snapback"
-                value={newHat.name}
-                onChange={this.nameChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="hatType">Type</label>
-              <input
-                type="text"
-                className="form-control"
-                id="hatType"
-                placeholder="Snapback"
-                value={newHat.type}
-                onChange={this.typeChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="colorWay">Color</label>
-              <input
-                type="text"
-                className="form-control"
-                id="colorWay"
-                placeholder="Black and Yellow"
-                value={newHat.colorWay}
-                onChange={this.colorWayChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="hatDescription">Description</label>
-              <input
-                type="text"
-                className="form-control"
-                id="hatDescription"
-                placeholder="A solid black hat with the Batman logo embroidered in the front"
-                value={newHat.description}
-                onChange={this.descriptionChange}
-              />
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </form>
+          <img src="https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/1625624_547718411992311_1237413250_n.jpg?_nc_cat=100&_nc_oc=AQm_nsS7WtfU9RuoqBrMTF29PCOzHt6-CZPofoYhrXCzuixgpclDeHS4PGvJ-Sf5tbQ&_nc_ht=scontent-msp1-1.xx&oh=ef4e2d2355e6e6ae3da59aa529c3f723&oe=5DE68724" alt="profile-pic" className="profilePhoto"/>
+          <div className="container">
+            <form className="coil-4 offset-8" onSubmit={this.submitForm}>
+              <div className="upload-group">
+                <label htmlFor="uploadFile"></label>
+                <input
+                  type="file"
+                  className="upload-group"
+                  id="uploadFile"
+                  // placeholder="Batman Snapback"
+                  value={newHat.name}
+                  onChange={this.nameChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="hatName">Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="hatName"
+                  placeholder="Batman Snapback"
+                  value={newHat.name}
+                  onChange={this.nameChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="hatType">Type</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="hatType"
+                  placeholder="Snapback"
+                  value={newHat.type}
+                  onChange={this.typeChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="colorWay">Color</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="colorWay"
+                  placeholder="Black and Yellow"
+                  value={newHat.colorWay}
+                  onChange={this.colorWayChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="hatDescription">Description</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="hatDescription"
+                  placeholder="A solid black hat with the Batman logo embroidered in the front"
+                  value={newHat.description}
+                  onChange={this.descriptionChange}
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="">
-          <div className="d-flex flex-wrap">
+        <div className="container">
+          <div className="d-flex flex-wrap profileCards">
           {makeHatCards}
           </div>
         </div>

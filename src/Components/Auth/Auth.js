@@ -12,7 +12,7 @@ class Auth extends React.Component {
   loginClickEvent = (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+    firebase.auth().signInWithEmailAndPassword(provider);
   };
 
   render() {
@@ -32,7 +32,7 @@ class Auth extends React.Component {
           </Form.Group>
         </Form>
         <button className="btn btn-secondary" onClick={this.loginClickEvent}>Log In!</button>
-        <Link className="btn btn-dark" to={SignUpLink}>SignUp</Link>
+        <Link className="btn btn-dark" to={SignUpLink}>Back To Profile</Link>
       </div>
     );
   }

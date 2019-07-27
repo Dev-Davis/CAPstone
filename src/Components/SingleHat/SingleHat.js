@@ -54,7 +54,6 @@ class Single extends React.Component {
   getComments = (hatId) => {
     commentData.getCommentByHatId(hatId)
       .then(comments => {
-        console.error(comments);
         this.setState({comments})
       })
       .catch(err => console.error('could not get comments', err));
@@ -69,7 +68,6 @@ class Single extends React.Component {
   submitComment = (e) => {
     e.preventDefault();
     const hatId = this.props.match.params.id;
-    console.error(hatId);
     const saveComment = { ...this.state.newComment };
     const date = moment().calendar();
     const username = firebase.auth().currentUser.displayName;
