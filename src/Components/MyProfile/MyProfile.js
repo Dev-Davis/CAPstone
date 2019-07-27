@@ -82,6 +82,17 @@ class Home extends React.Component {
         <img src="#" alt="profile-pic"/>
         <div className="container">
           <form className="" onSubmit={this.submitForm}>
+            <div className="upload-group">
+              <label htmlFor="uploadFile"></label>
+              <input
+                type="file"
+                className="upload-group"
+                id="uploadFile"
+                // placeholder="Batman Snapback"
+                value={newHat.name}
+                onChange={this.nameChange}
+              />
+            </div>
             <div className="form-group">
               <label htmlFor="hatName">Name</label>
               <input
@@ -131,7 +142,7 @@ class Home extends React.Component {
             </button>
           </form>
         </div>
-        <div className="#">
+        <div className="">
           <div className="d-flex flex-wrap">
           {makeHatCards}
           </div>

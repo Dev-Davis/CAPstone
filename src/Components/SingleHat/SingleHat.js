@@ -53,7 +53,10 @@ class Single extends React.Component {
   // This is where you assign comments to certain hats
   getComments = (hatId) => {
     commentData.getCommentByHatId(hatId)
-      .then(comments => this.setState({comments}))
+      .then(comments => {
+        console.error(comments);
+        this.setState({comments})
+      })
       .catch(err => console.error('could not get comments', err));
   }
   singleHat = () => {
@@ -66,6 +69,7 @@ class Single extends React.Component {
   submitComment = (e) => {
     e.preventDefault();
     const hatId = this.props.match.params.id;
+    console.error(hatId);
     const saveComment = { ...this.state.newComment };
     const date = moment().calendar();
     const username = firebase.auth().currentUser.displayName;
@@ -77,6 +81,7 @@ class Single extends React.Component {
     saveComment.comment = comment;
     commentData.postNewComment(saveComment)
     .then(() => this.getComments(hatId))
+    .catch(err => console.error('could not submit comment', err));
      // To clear the form after submission
      this.setState({ 
       username: '',
@@ -90,6 +95,11 @@ class Single extends React.Component {
     this.singleHat();
   }
 
+  /* ProfileHatId gets the id of the hat the comment is being left on
+`Then you'll import and get the axios call to push the info into the data base
+.then() re render the comments with the getComments method taking in the profileHatId 
+to get the comments for that hat */
+
   updateComment = (saveComment, commentId) => {
     const profileHatId = this.props.match.params.id;
     commentData.updateComment(saveComment, commentId)
@@ -98,8 +108,9 @@ class Single extends React.Component {
   }
 
   removeComment = (commentId) => {
+    const hatId = this.props.match.params.id;
     commentData.deleteComment(commentId)
-    .then(() => this.getComments())
+    .then(() => this.getComments(hatId))
     .catch(err => console.error('cannot delete comment', err)); 
   }
 
