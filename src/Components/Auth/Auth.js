@@ -2,8 +2,6 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import { Link } from 'react-router-dom';
-
 import { Form } from 'react-bootstrap';
 
 import './Auth.scss';
@@ -16,11 +14,10 @@ class Auth extends React.Component {
   };
 
   render() {
-    const SignUpLink = '/signup';
     return (
       <div className="Auth text-center">
-        <h1 className="loginAuth">HatFish</h1>
-        <h5 className="loginAuth">"There's nothing to hide"</h5>
+        {/* <h1 className="loginAuth">HatFish</h1> */}
+        {/* <h5 className="loginAuth">"There's nothing to hide"</h5> */}
         <Form className="col-4 offset-4">
           <Form.Group controlId="formGroupEmail">
             <Form.Label>Email address</Form.Label>
@@ -32,7 +29,7 @@ class Auth extends React.Component {
           </Form.Group>
         </Form>
         <button className="btn btn-secondary" onClick={this.loginClickEvent}>Log In!</button>
-        <Link className="btn btn-dark" to={SignUpLink}>Back To Profile</Link>
+        {/* <img src={'https://ibb.co/TWtp00S'} alt='login background' /> */}
       </div>
     );
   }

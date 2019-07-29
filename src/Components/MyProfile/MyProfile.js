@@ -9,16 +9,20 @@ import hatData from "../../helpers/data/hatData";
 import "./MyProfile.scss";
 
 const defaultHatInfo = {
-  name: "",
-  type: "",
-  colorWay: "",
-  description: ""
+  name: '',
+  type: '',
+  colorWay: '',
+  description: ''
 };
 
 class Home extends React.Component {
   state = {
     hats: [],
-    newHat: defaultHatInfo
+    newHat: defaultHatInfo,
+    name: '',
+    type: '',
+    colorWay: '',
+    description: ''
   };
 
   /* Changes the state for the strings in each category
@@ -30,10 +34,31 @@ class Home extends React.Component {
     this.setState({ newHat: copyHats });
   };
 
-  nameChange = e => this.stringStateField("name", e);
-  typeChange = e => this.stringStateField("type", e);
-  colorWayChange = e => this.stringStateField("colorWay", e);
-  descriptionChange = e => this.stringStateField("description", e);
+  nameChange = e => this.stringStateField('name', e);
+  typeChange = e => this.stringStateField('type', e);
+  colorWayChange = e => this.stringStateField('colorWay', e);
+  descriptionChange = e => this.stringStateField('description', e);
+  
+// The next four variables sets you form to a set state of controlled or uncontrolled
+  nameChange = (e) => {
+    e.preventDefault();
+    this.setState({ name: e.target.value })
+  } 
+  
+  typeChange = (e) => {
+    e.preventDefault();
+    this.setState({ type: e.target.value })
+  } 
+  
+  colorWayChange = (e) => {
+    e.preventDefault();
+    this.setState({ colorWay: e.target.value })
+  } 
+  
+  descriptionChange = (e) => {
+    e.preventDefault();
+    this.setState({ description: e.target.value })
+  }
 
   getHats = () => {
     const { uid } = firebase.auth().currentUser;
@@ -54,7 +79,13 @@ class Home extends React.Component {
     hatData
       .postNewHat(saveHat)
       .then(() => this.getHats())
-      .catch(err => console.error("unable to post new hat", err));
+      // .catch(err => console.error("unable to post new hat", err));
+      this.setState({ 
+        name: '',
+        type: '',
+        colorWay: '',
+        description: ''
+      })
   };
 
   deleteHat = hatId => {
@@ -69,21 +100,20 @@ class Home extends React.Component {
   };
   
   render() {
-    const { newHat } = this.state;
+    // const { newHat } = this.state;
     const makeHatCards = this.state.hats.map(hat => (
       <ProfileHatsCard key={hat.id} hats={hat} deleteHat={this.deleteHat} />
       ));
       
       return (
-        // <div className="profile-pic">
-        //   {/* <img src="..." alt="..." /> */}
-        // </div>
       <div className="#">
         <div className="container">
           <img src="https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/1625624_547718411992311_1237413250_n.jpg?_nc_cat=100&_nc_oc=AQm_nsS7WtfU9RuoqBrMTF29PCOzHt6-CZPofoYhrXCzuixgpclDeHS4PGvJ-Sf5tbQ&_nc_ht=scontent-msp1-1.xx&oh=ef4e2d2355e6e6ae3da59aa529c3f723&oe=5DE68724" alt="profile-pic" className="profilePhoto"/>
-          <div className="container">
-            <form className="coil-4 offset-8" onSubmit={this.submitForm}>
-              <div className="upload-group">
+          <form className="col-4 offset-8" onSubmit={this.submitForm}>
+            <div className="uploadTitle">
+              Add a hat...
+            </div>
+              {/* <div className="upload-group">
                 <label htmlFor="uploadFile"></label>
                 <input
                   type="file"
@@ -93,7 +123,7 @@ class Home extends React.Component {
                   value={newHat.name}
                   onChange={this.nameChange}
                 />
-              </div>
+              </div> */}
               <div className="form-group">
                 <label htmlFor="hatName">Name</label>
                 <input
@@ -101,7 +131,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatName"
                   placeholder="Batman Snapback"
-                  value={newHat.name}
+                  value={this.state.name}
                   onChange={this.nameChange}
                 />
               </div>
@@ -112,18 +142,18 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatType"
                   placeholder="Snapback"
-                  value={newHat.type}
+                  value={this.state.type}
                   onChange={this.typeChange}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="colorWay">Color</label>
+                <label htmlFor="hatColorWay">Color</label>
                 <input
                   type="text"
                   className="form-control"
-                  id="colorWay"
+                  id="hatColorWay"
                   placeholder="Black and Yellow"
-                  value={newHat.colorWay}
+                  value={this.state.colorWay}
                   onChange={this.colorWayChange}
                 />
               </div>
@@ -134,15 +164,20 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatDescription"
                   placeholder="A solid black hat with the Batman logo embroidered in the front"
-                  value={newHat.description}
+                  value={this.state.description}
                   onChange={this.descriptionChange}
                 />
               </div>
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-            </form>
-          </div>
+          </form>
+        </div>
+        <div className="aboutMe text-center col-4 offset-4">
+          About Me
+        </div>
+        <div className="aboutMeDescription col-4 offset-4">
+          I am a lover of hats! This is a website for hat lovers such as myself. Hope you like it also.
         </div>
         <div className="container">
           <div className="d-flex flex-wrap profileCards">

@@ -60,7 +60,7 @@ class Home extends React.Component {
     ));
 
     return (
-      <div className="Home">
+      <div className="Home col-4 offset-4">
         <form onSubmit={this.submitForm}>
           <div className="form-group">
             <label htmlFor="hatName">Name</label>

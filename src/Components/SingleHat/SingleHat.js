@@ -13,9 +13,9 @@ import commentShapes from '../../helpers/propz/commentShapes';
 import './SingleHat.scss';
 
 const  newCommentInfo = {
-  username: '',
+  // username: '',
   comment: '',
-  date: '',
+  // date: '',
 }
 
 class Single extends React.Component {
@@ -127,7 +127,7 @@ to get the comments for that hat */
     ));
     
     return (
-      <div className="singlePage">
+      <div className="singlePage col-4 offset-4">
       <div className="card">
           <div className="card-header"></div>
           <h1 className="text-center">{profileHats.name}</h1>
