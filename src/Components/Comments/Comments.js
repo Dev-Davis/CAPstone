@@ -5,6 +5,8 @@ import EditCommentDiv from '../EditCommentDiv/EditCommentDiv';
 
 import commentShapes from '../../helpers/propz/commentShapes';
 
+import './Comments';
+
 class CommentCard extends React.Component {
   static propTypes = {
     comment: commentShapes.commentShapes,
@@ -16,13 +18,12 @@ class CommentCard extends React.Component {
    e.preventDefault();
    const { comment, removeComment } = this.props;
    removeComment(comment.id);
-   console.error(comment.id);
  }
 
   render() {
     return (
       <div>
-        <div className="card w-95">
+        <div className="card w-99">
           <div className="card-body">
             <h4 className="card-title">{this.props.comment.username}</h4>
             <h5 className="card-text">{this.props.comment.comment}</h5>

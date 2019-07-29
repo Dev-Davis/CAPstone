@@ -43,9 +43,9 @@ render() {
     if (authed) {
       return (
         <Nav className="ml-auto" navbar>
-          <NavItem>
+          {/* <NavItem>
             <NavLink tag={RRNavLink} to='/home' >Home</NavLink>
-          </NavItem>
+          </NavItem> */}
           <NavItem>
             <NavLink tag={RRNavLink} to='/profile'>My Profile</NavLink>
           </NavItem>
