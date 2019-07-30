@@ -1,16 +1,26 @@
-/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
-
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
+import PropTypes from 'prop-types';
+
+// import commentData from '../../helpers/data/commentData';
+
+import commentShapes from '../../helpers/propz/commentShapes';
+// import commentData from '../../helpers/data/commentData';
 
 class EditCommentDiv extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      comment: ''
     };
-
     this.toggle = this.toggle.bind(this);
+  }
+
+  static propTypes = {
+    comment: commentShapes.commentShapes,
+    updateComment: PropTypes.func.isRequired,
   }
 
   toggle() {
@@ -19,10 +29,21 @@ class EditCommentDiv extends React.Component {
     }));
   }
 
+  // Important part of update in modal
   updateComment = (e) => {
     e.preventDefault();
-    console.error('hi');
+    const { updateComment } = this.props;
+    const saveComment = this.state.comment;
+    const commentId = this.props.comment.commentId;
+    const editedCommentIsh = {...this.props.comment};
+    editedCommentIsh.comment = saveComment;
+    updateComment(editedCommentIsh, commentId)
     this.toggle();
+  }
+
+  commentChange = (e) => {
+    e.preventDefault();
+    this.setState({ comment: e.target.value })
   }
 
   render() {
@@ -45,13 +66,12 @@ class EditCommentDiv extends React.Component {
                 onChange={this.commentChange}/>
               </div>
               <div className="commentForm">
-                {/* <button type="submit" className="btn btn-primary" onClick={this.submitComment}>Comment</button> */}
               </div>
             </form>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.updateComment}>Update</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}  onSubmit={this.toggle}>Cancel</Button>
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
       </div>

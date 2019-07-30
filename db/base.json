@@ -1,5 +1,6 @@
 {
   "hats": "hats",
   "profileHats": "myHats",
-  "comments": "comments"
+  "comments": "comments",
+  "users": "users"
 }

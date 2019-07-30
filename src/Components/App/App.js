@@ -16,6 +16,7 @@ import Home from '../Home/Home';
 import Profile from '../MyProfile/MyProfile';
 import SingleHat from '../SingleHat/SingleHat';
 import EditHat from '../EditHat/EditHat';
+import SignUp from '../SignUp/SignUp';
 
 import connection from '../../helpers/connection';
 
@@ -24,7 +25,7 @@ connection();
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === false
     ? (<Component {...props} />)
-    : (<Redirect to={{ pathname: '/home', state: { from: props.location } }}/>)
+    : (<Redirect to={{ pathname: '/profile', state: { from: props.location } }}/>)
   );
   return <Route {...rest} render={props => routeChecker(props)} />;
 };
@@ -69,6 +70,7 @@ class App extends React.Component {
                   <PrivateRoute path='/edit/:id' component={EditHat} authed={authed} />
                   <PrivateRoute path='/single/:id' component={SingleHat} authed={authed} />
                   <PrivateRoute path='/profile' component={Profile} authed={authed} />
+                  <PrivateRoute path='/signup' component={SignUp} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
           </React.Fragment>

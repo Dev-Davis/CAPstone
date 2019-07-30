@@ -1,19 +1,14 @@
 body {
   font-family: 'Special Elite', cursive;
-  background-image: url(https://www.kennedytiles.com/images/pages/jersey-city-slate.jpg);
-  // background-size: cover;
+  background-image: url(https://i.ibb.co/rdHTppS/hats-bg-png.png);
+  background-size: cover;
 }
 
 .card {
   margin: 10px;
   background-color: black;
   color: white;
-  border: 1px dotted red;
-}
-
-.header-title {
-  font-size: 72px;
-  color: black;
+  border-radius: 9px;
 }
 
 .MyNavbar {
@@ -21,11 +16,12 @@ body {
 }
 
 .navTitle {
-  font-size: 28px;
+  font-size: 44px;
+  // font-family: 'Hanalei', cursive;
 }
 
 .card-title, .header-title {
-  // padding: 10px;
+  padding: 10px;
 }
 
 .intro-bar {
@@ -34,6 +30,6 @@ body {
   width: 100%;
   padding: 5px;
   font-size: 22px;
-  // border: 1px solid black;
-  border-radius: 11px;
+  border-bottom: 1px solid black;
+  border-radius: 4px;
 }
