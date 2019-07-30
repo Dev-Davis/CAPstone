@@ -1,0 +1,22 @@
+{
+  "user01": {
+    "firstName": "Sean",
+    "lastName": "Davis",
+    "userName": "iLL Gates",
+    "password": "password",
+    "email": "sean.d.davis86@gmail.com",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
+    "aboutMe": "I am a lover of hats! This is a website for hat lovers such as myself. Hope you like it also.",
+    "profilePicUrl": "https://i.ibb.co/7V1VSMp/me-and-sis-2.jpg"
+  },
+  "user02": {
+    "firstName": "Dot",
+    "lastName": "Davis",
+    "userName": "Dot Dang",
+    "password": "password",
+    "email": "sean.dev.davis@gmail.com",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
+    "aboutMe": "This has been giving me problems and I'm about to lock in on em and blow them to smitherines.",
+    "profilePicUrl": "https://i.ibb.co/bKJm19P/me-and-sis.jpg"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "comment1": {
+    "comment": "Pretty awesome hat!!!",
+    "username": "Mike C",
+    "date": "07-16-19",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
+    "hatId": "hat22"
+  },
+  "comment2": {
+    "comment": "Where did you get that hat?",
+    "username": "Zoë A",
+    "date": "07-16-19",
+    "uid": "12345",
+    "hatId": "hat26"
+  },
+  "comment3": {
+    "comment": "That's the best hat I've seen so far!!!",
+    "username": "Greg K",
+    "date": "07-16-19",
+    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
+    "hatId": "hat24"
+  },
+  "comment4": {
+    "comment": "How many hats do you have?",
+    "username": "Lids",
+    "date": "07-16-19",
+    "uid": "12345",
+    "hatId": "hat25"
+  }
+}
