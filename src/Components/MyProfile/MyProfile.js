@@ -6,6 +6,8 @@ import ProfileHatsCard from "../ProfileHatCard/ProfileHatCard";
 
 import hatData from "../../helpers/data/hatData";
 
+import userShapes from '../../helpers/propz/userShapes';
+
 import "./MyProfile.scss";
 
 const defaultHatInfo = {
@@ -24,6 +26,10 @@ class Home extends React.Component {
     colorWay: '',
     description: ''
   };
+
+  static propTypes = {
+    users: userShapes.userShapes,
+  }
 
   /* Changes the state for the strings in each category
   for adding them to the page */
@@ -173,10 +179,11 @@ class Home extends React.Component {
               </button>
           </form>
         </div>
-        <div className="aboutMe text-center col-4 offset-4">
-          About Me
-        </div>
-        <div className="aboutMeDescription col-4 offset-4">
+        <div className="aboutSection text-center col-4 offset-4">
+          <span className="aboutMe">About Me</span>
+          <br></br>
+        {/* </div>
+        <div className="aboutMeDescription col-4 offset-4"> */}
           I am a lover of hats! This is a website for hat lovers such as myself. Hope you like it also.
         </div>
         <div className="container">
