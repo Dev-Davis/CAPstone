@@ -4,10 +4,9 @@ This is a social network created for hat lovers such as myself for the many type
 
 # Screenshots
 
-https://i.ibb.co/9ssn2wz/Profile-Page.png
+<img src="https://i.ibb.co/9ssn2wz/Profile-Page.png" alt="Profile-Page" border="0">
 
-https://i.ibb.co/7V0BC43/Hat-Edit-Page.png
-
+<img src="https://i.ibb.co/7V0BC43/Hat-Edit-Page.png" alt="Hat-Edit-Page" border="0">
 
 
 # Installation Instructions
