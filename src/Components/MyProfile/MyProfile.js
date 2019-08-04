@@ -6,6 +6,8 @@ import ProfileHatsCard from "../ProfileHatCard/ProfileHatCard";
 
 import hatData from "../../helpers/data/hatData";
 
+import userShapes from '../../helpers/propz/userShapes';
+
 import "./MyProfile.scss";
 
 const defaultHatInfo = {
@@ -22,8 +24,13 @@ class Home extends React.Component {
     name: '',
     type: '',
     colorWay: '',
-    description: ''
+    description: '',
+    imageUrl: ''
   };
+
+  static propTypes = {
+    users: userShapes.userShapes,
+  }
 
   /* Changes the state for the strings in each category
   for adding them to the page */
@@ -34,31 +41,37 @@ class Home extends React.Component {
     this.setState({ newHat: copyHats });
   };
 
+  imageChange = e => this.stringStateField('imageUrl', e);
   nameChange = e => this.stringStateField('name', e);
   typeChange = e => this.stringStateField('type', e);
   colorWayChange = e => this.stringStateField('colorWay', e);
   descriptionChange = e => this.stringStateField('description', e);
   
 // The next four variables sets you form to a set state of controlled or uncontrolled
-  nameChange = (e) => {
-    e.preventDefault();
-    this.setState({ name: e.target.value })
-  } 
+  // imageChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ imageUrl: e.target.value })
+  // } 
   
-  typeChange = (e) => {
-    e.preventDefault();
-    this.setState({ type: e.target.value })
-  } 
+  // nameChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ name: e.target.value })
+  // } 
   
-  colorWayChange = (e) => {
-    e.preventDefault();
-    this.setState({ colorWay: e.target.value })
-  } 
+  // typeChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ type: e.target.value })
+  // } 
   
-  descriptionChange = (e) => {
-    e.preventDefault();
-    this.setState({ description: e.target.value })
-  }
+  // colorWayChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ colorWay: e.target.value })
+  // } 
+  
+  // descriptionChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ description: e.target.value })
+  // }
 
   getHats = () => {
     const { uid } = firebase.auth().currentUser;
@@ -125,13 +138,24 @@ class Home extends React.Component {
                 />
               </div> */}
               <div className="form-group">
+                <label htmlFor="hatImage">Hat Image</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="hatImage"
+                  placeholder="Paste Image Link Here"
+                  value={this.state.imageUrl}
+                  onChange={this.imageChange}
+                />
+              </div>
+              <div className="form-group">
                 <label htmlFor="hatName">Name</label>
                 <input
                   type="text"
                   className="form-control"
                   id="hatName"
                   placeholder="Batman Snapback"
-                  value={this.state.name}
+                  value={this.state.newHat.name}
                   onChange={this.nameChange}
                 />
               </div>
@@ -142,7 +166,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatType"
                   placeholder="Snapback"
-                  value={this.state.type}
+                  value={this.state.newHat.type}
                   onChange={this.typeChange}
                 />
               </div>
@@ -153,7 +177,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatColorWay"
                   placeholder="Black and Yellow"
-                  value={this.state.colorWay}
+                  value={this.state.newHat.colorWay}
                   onChange={this.colorWayChange}
                 />
               </div>
@@ -164,7 +188,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatDescription"
                   placeholder="A solid black hat with the Batman logo embroidered in the front"
-                  value={this.state.description}
+                  value={this.state.newHat.description}
                   onChange={this.descriptionChange}
                 />
               </div>
@@ -173,10 +197,11 @@ class Home extends React.Component {
               </button>
           </form>
         </div>
-        <div className="aboutMe text-center col-4 offset-4">
-          About Me
-        </div>
-        <div className="aboutMeDescription col-4 offset-4">
+        <div className="aboutSection text-center col-4 offset-4">
+          <span className="aboutMe">About Me</span>
+          <br></br>
+        {/* </div>
+        <div className="aboutMeDescription col-4 offset-4"> */}
           I am a lover of hats! This is a website for hat lovers such as myself. Hope you like it also.
         </div>
         <div className="container">
