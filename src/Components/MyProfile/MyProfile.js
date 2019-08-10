@@ -1,6 +1,6 @@
 import React from "react";
 import firebase from "firebase/app";
-// import { Link } from 'react-router-dom';
+// import FileUploader from "react-firebase-file-uploader";
 
 import ProfileHatsCard from "../ProfileHatCard/ProfileHatCard";
 
@@ -14,7 +14,8 @@ const defaultHatInfo = {
   name: '',
   type: '',
   colorWay: '',
-  description: ''
+  description: '',
+  imageUrl: ''
 };
 
 class Home extends React.Component {
@@ -46,25 +47,25 @@ class Home extends React.Component {
   descriptionChange = e => this.stringStateField('description', e);
   
 // The next four variables sets you form to a set state of controlled or uncontrolled
-  nameChange = (e) => {
-    e.preventDefault();
-    this.setState({ name: e.target.value })
-  } 
+  // nameChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ name: e.target.value })
+  // } 
   
-  typeChange = (e) => {
-    e.preventDefault();
-    this.setState({ type: e.target.value })
-  } 
+  // typeChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ type: e.target.value })
+  // } 
   
-  colorWayChange = (e) => {
-    e.preventDefault();
-    this.setState({ colorWay: e.target.value })
-  } 
+  // colorWayChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ colorWay: e.target.value })
+  // } 
   
-  descriptionChange = (e) => {
-    e.preventDefault();
-    this.setState({ description: e.target.value })
-  }
+  // descriptionChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ description: e.target.value })
+  // }
 
   getHats = () => {
     const { uid } = firebase.auth().currentUser;
@@ -101,8 +102,14 @@ class Home extends React.Component {
       .catch(err => console.error("unable to delete the hat", err));
   };
 
-  fileSelectedHandler = e => {
-    e.preventDefault();
+  handleUploadSuccess = filename => {
+    this.setState({ avatar: filename, progress: 100, isUploading: false });
+    firebase
+      .storage()
+      .ref("images")
+      .child(filename)
+      .getDownloadURL()
+      .then(url => this.setState({ avatarURL: url }));
   };
   
   render() {
@@ -121,13 +128,15 @@ class Home extends React.Component {
             </div>
               {/* <div className="upload-group">
                 <label htmlFor="uploadFile"></label>
-                <input
-                  type="file"
-                  className="upload-group"
-                  id="uploadFile"
-                  // placeholder="Batman Snapback"
-                  value={newHat.name}
-                  onChange={this.nameChange}
+                <FileUploader
+                  accept="image/*"
+                  name="avatar"
+                  randomizeFilename
+                  // storageRef={firebase.storage().ref("images")}
+                  onUploadStart={this.handleUploadStart}
+                  onUploadError={this.handleUploadError}
+                  onUploadSuccess={this.handleUploadSuccess}
+                  onProgress={this.handleProgress}
                 />
               </div> */}
               <div className="form-group">
@@ -137,7 +146,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatName"
                   placeholder="Batman Snapback"
-                  value={this.state.name}
+                  value={this.state.newHat.name}
                   onChange={this.nameChange}
                 />
               </div>
@@ -148,7 +157,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatType"
                   placeholder="Snapback"
-                  value={this.state.type}
+                  value={this.state.newHat.type}
                   onChange={this.typeChange}
                 />
               </div>
@@ -159,7 +168,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatColorWay"
                   placeholder="Black and Yellow"
-                  value={this.state.colorWay}
+                  value={this.state.newHat.colorWay}
                   onChange={this.colorWayChange}
                 />
               </div>
@@ -170,7 +179,7 @@ class Home extends React.Component {
                   className="form-control"
                   id="hatDescription"
                   placeholder="A solid black hat with the Batman logo embroidered in the front"
-                  value={this.state.description}
+                  value={this.state.newHat.description}
                   onChange={this.descriptionChange}
                 />
               </div>
