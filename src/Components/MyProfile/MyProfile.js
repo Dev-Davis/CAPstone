@@ -37,6 +37,7 @@ class Home extends React.Component {
     this.setState({ newHat: copyHats });
   };
 
+  imageChange = e => this.stringStateField('imageUrl', e);
   nameChange = e => this.stringStateField('name', e);
   typeChange = e => this.stringStateField('type', e);
   colorWayChange = e => this.stringStateField('colorWay', e);
@@ -133,6 +134,17 @@ class Home extends React.Component {
                   onProgress={this.handleProgress}
                 />
               </div> */}
+              <div className="form-group">
+                <label htmlFor="hatImage">Hat Image</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="hatImage"
+                  placeholder="Paste Image Link Here"
+                  value={this.state.imageUrl}
+                  onChange={this.imageChange}
+                />
+              </div>
               <div className="form-group">
                 <label htmlFor="hatName">Name</label>
                 <input
