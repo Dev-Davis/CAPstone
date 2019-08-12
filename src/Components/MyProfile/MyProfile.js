@@ -37,13 +37,18 @@ class Home extends React.Component {
     this.setState({ newHat: copyHats });
   };
 
+  imageChange = e => this.stringStateField('imageUrl', e);
   nameChange = e => this.stringStateField('name', e);
   typeChange = e => this.stringStateField('type', e);
   colorWayChange = e => this.stringStateField('colorWay', e);
   descriptionChange = e => this.stringStateField('description', e);
   
 // The next four variables sets you form to a set state of controlled or uncontrolled
-
+  // imageChange = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ imageUrl: e.target.value })
+  // } 
+  
   // nameChange = (e) => {
   //   e.preventDefault();
   //   this.setState({ name: e.target.value })
@@ -120,17 +125,15 @@ class Home extends React.Component {
             <div className="uploadTitle">
               Add a hat...
             </div>
-              {/* <div className="upload-group">
-                <label htmlFor="uploadFile"></label>
-                <FileUploader
-                  accept="image/*"
-                  name="avatar"
-                  randomizeFilename
-                  // storageRef={firebase.storage().ref("images")}
-                  onUploadStart={this.handleUploadStart}
-                  onUploadError={this.handleUploadError}
-                  onUploadSuccess={this.handleUploadSuccess}
-                  onProgress={this.handleProgress}
+              {/* <div className="form-group">
+                <label htmlFor="hatImage">Hat Image</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="hatImage"
+                  placeholder="Paste Image Link Here"
+                  value={this.state.imageUrl}
+                  onChange={this.imageChange}
                 />
               </div> */}
               <div className="form-group">
