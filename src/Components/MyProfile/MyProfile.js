@@ -167,7 +167,7 @@ class Home extends React.Component {
               <div className="form-group">
                 <label htmlFor="hatDescription">Description</label>
                 <input
-                  type="text"
+                  type="textarea"
                   className="form-control"
                   id="hatDescription"
                   placeholder="A solid black hat with the Batman logo embroidered in the front"
