@@ -21,7 +21,7 @@ const defaultHatInfo = {
 class Home extends React.Component {
   state = {
     hats: [],
-    newHat: defaultHatInfo,
+    newHat: defaultHatInfo
   };
 
   static propTypes = {
@@ -44,11 +44,6 @@ class Home extends React.Component {
   descriptionChange = e => this.stringStateField('description', e);
   
 // The next four variables sets you form to a set state of controlled or uncontrolled
-  // imageChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ imageUrl: e.target.value })
-  // } 
-  
   // nameChange = (e) => {
   //   e.preventDefault();
   //   this.setState({ name: e.target.value })
