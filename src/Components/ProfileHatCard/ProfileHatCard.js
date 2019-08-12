@@ -28,7 +28,7 @@ class ProfileHatsCard extends React.Component {
               <h3 className="card-title">{hats.name}</h3>
               <p className="card-text">{hats.type}</p>
               <h5 className="card-text">{hats.colorWay}</h5>
-              <h5 className="card-text">{hats.description}</h5>
+              <h6 className="card-text">{hats.description}</h6>
               <Link className="btn btn-warning" to={editLink}>Edit</Link>
               <button className="btn btn-danger" onClick={this.deleteHat}>Delete</button>
             </div>

@@ -21,7 +21,7 @@ const defaultHatInfo = {
 class Home extends React.Component {
   state = {
     hats: [],
-    newHat: defaultHatInfo
+    newHat: defaultHatInfo,
   };
 
   static propTypes = {
