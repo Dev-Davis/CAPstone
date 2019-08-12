@@ -21,11 +21,7 @@ const defaultHatInfo = {
 class Home extends React.Component {
   state = {
     hats: [],
-    newHat: defaultHatInfo,
-    name: '',
-    type: '',
-    colorWay: '',
-    description: ''
+    newHat: defaultHatInfo
   };
 
   static propTypes = {
@@ -47,6 +43,7 @@ class Home extends React.Component {
   descriptionChange = e => this.stringStateField('description', e);
   
 // The next four variables sets you form to a set state of controlled or uncontrolled
+
   // nameChange = (e) => {
   //   e.preventDefault();
   //   this.setState({ name: e.target.value })
@@ -88,10 +85,7 @@ class Home extends React.Component {
       .then(() => this.getHats())
       // .catch(err => console.error("unable to post new hat", err));
       this.setState({ 
-        name: '',
-        type: '',
-        colorWay: '',
-        description: ''
+        newHat: defaultHatInfo
       })
   };
 
