@@ -44,26 +44,6 @@ class Home extends React.Component {
   colorWayChange = e => this.stringStateField('colorWay', e);
   descriptionChange = e => this.stringStateField('description', e);
   
-// The next four variables sets you form to a set state of controlled or uncontrolled
-  // nameChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ name: e.target.value })
-  // } 
-  
-  // typeChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ type: e.target.value })
-  // } 
-  
-  // colorWayChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ colorWay: e.target.value })
-  // } 
-  
-  // descriptionChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ description: e.target.value })
-  // }
 
   getHats = () => {
     const { uid } = firebase.auth().currentUser;
