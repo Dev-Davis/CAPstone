@@ -1,6 +1,5 @@
 import React from "react";
 import firebase from "firebase/app";
-// import FileUploader from "react-firebase-file-uploader";
 
 import ProfileHatsCard from "../ProfileHatCard/ProfileHatCard";
 
@@ -9,6 +8,8 @@ import hatData from "../../helpers/data/hatData";
 import userShapes from '../../helpers/propz/userShapes';
 
 import "./MyProfile.scss";
+
+// sets the hat info to blank as default
 
 const defaultHatInfo = {
   name: '',
