@@ -1,6 +1,5 @@
 import React from "react";
 import firebase from "firebase/app";
-// import FileUploader from "react-firebase-file-uploader";
 
 import ProfileHatsCard from "../ProfileHatCard/ProfileHatCard";
 
@@ -9,6 +8,8 @@ import hatData from "../../helpers/data/hatData";
 import userShapes from '../../helpers/propz/userShapes';
 
 import "./MyProfile.scss";
+
+// sets the hat info to blank as default
 
 const defaultHatInfo = {
   name: '',
@@ -120,17 +121,6 @@ class Home extends React.Component {
             <div className="uploadTitle">
               Add a hat...
             </div>
-              {/* <div className="form-group">
-                <label htmlFor="hatImage">Hat Image</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="hatImage"
-                  placeholder="Paste Image Link Here"
-                  value={this.state.imageUrl}
-                  onChange={this.imageChange}
-                />
-              </div> */}
               <div className="form-group">
                 <label htmlFor="hatName">Name</label>
                 <input
