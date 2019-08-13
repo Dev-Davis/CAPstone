@@ -120,17 +120,6 @@ class Home extends React.Component {
             <div className="uploadTitle">
               Add a hat...
             </div>
-              {/* <div className="form-group">
-                <label htmlFor="hatImage">Hat Image</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="hatImage"
-                  placeholder="Paste Image Link Here"
-                  value={this.state.imageUrl}
-                  onChange={this.imageChange}
-                />
-              </div> */}
               <div className="form-group">
                 <label htmlFor="hatName">Name</label>
                 <input
