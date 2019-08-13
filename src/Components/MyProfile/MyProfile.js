@@ -1,6 +1,6 @@
 import React from "react";
 import firebase from "firebase/app";
-// import { Link } from 'react-router-dom';
+// import FileUploader from "react-firebase-file-uploader";
 
 import ProfileHatsCard from "../ProfileHatCard/ProfileHatCard";
 
@@ -14,18 +14,14 @@ const defaultHatInfo = {
   name: '',
   type: '',
   colorWay: '',
-  description: ''
+  description: '',
+  imageUrl: ''
 };
 
 class Home extends React.Component {
   state = {
     hats: [],
-    newHat: defaultHatInfo,
-    name: '',
-    type: '',
-    colorWay: '',
-    description: '',
-    imageUrl: ''
+    newHat: defaultHatInfo
   };
 
   static propTypes = {
@@ -48,11 +44,6 @@ class Home extends React.Component {
   descriptionChange = e => this.stringStateField('description', e);
   
 // The next four variables sets you form to a set state of controlled or uncontrolled
-  // imageChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ imageUrl: e.target.value })
-  // } 
-  
   // nameChange = (e) => {
   //   e.preventDefault();
   //   this.setState({ name: e.target.value })
@@ -94,10 +85,7 @@ class Home extends React.Component {
       .then(() => this.getHats())
       // .catch(err => console.error("unable to post new hat", err));
       this.setState({ 
-        name: '',
-        type: '',
-        colorWay: '',
-        description: ''
+        newHat: defaultHatInfo
       })
   };
 
@@ -108,8 +96,14 @@ class Home extends React.Component {
       .catch(err => console.error("unable to delete the hat", err));
   };
 
-  fileSelectedHandler = e => {
-    e.preventDefault();
+  handleUploadSuccess = filename => {
+    this.setState({ avatar: filename, progress: 100, isUploading: false });
+    firebase
+      .storage()
+      .ref("images")
+      .child(filename)
+      .getDownloadURL()
+      .then(url => this.setState({ avatarURL: url }));
   };
   
   render() {
@@ -126,28 +120,6 @@ class Home extends React.Component {
             <div className="uploadTitle">
               Add a hat...
             </div>
-              {/* <div className="upload-group">
-                <label htmlFor="uploadFile"></label>
-                <input
-                  type="file"
-                  className="upload-group"
-                  id="uploadFile"
-                  // placeholder="Batman Snapback"
-                  value={newHat.name}
-                  onChange={this.nameChange}
-                />
-              </div> */}
-              <div className="form-group">
-                <label htmlFor="hatImage">Hat Image</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="hatImage"
-                  placeholder="Paste Image Link Here"
-                  value={this.state.imageUrl}
-                  onChange={this.imageChange}
-                />
-              </div>
               <div className="form-group">
                 <label htmlFor="hatName">Name</label>
                 <input
@@ -184,7 +156,7 @@ class Home extends React.Component {
               <div className="form-group">
                 <label htmlFor="hatDescription">Description</label>
                 <input
-                  type="text"
+                  type="textarea"
                   className="form-control"
                   id="hatDescription"
                   placeholder="A solid black hat with the Batman logo embroidered in the front"
