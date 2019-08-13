@@ -10,6 +10,7 @@ class ProfileHatsCard extends React.Component {
     deleteHat: PropTypes.func.isRequired,
   }
 
+  // function to delete hat
   deleteHat = (e) => {
     e.preventDefault();
     const { hats, deleteHat } = this.props;
