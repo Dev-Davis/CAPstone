@@ -15,12 +15,16 @@ class Auth extends React.Component {
 
   render() {
     return (
-      <div className="Auth col-10 offset-1">
-        {/* <h1 className="loginAuth">HatFish</h1> */}
-        {/* <h5 className="loginAuth">"There's nothing to hide"</h5> */}
-        <h1 className="loginAuth">CAPstone</h1>
-        <h5 className="loginAuth">"Hats Collector's World"</h5>
-        <button className="btn btn-primary" onClick={this.loginClickEvent}>Log In!</button>
+      <div className="container">
+        <div className="col-10 offset-1">
+          {/* <h1 className="loginAuth">HatFish</h1> */}
+          {/* <h5 className="loginAuth">"There's nothing to hide"</h5> */}
+          <div className="title-slogan text-center">
+            <h1 className="loginAuth">CAPstone</h1>
+            <h5 className="loginAuth">"A Hats Collector's World"</h5>
+            <button className="btn btn-primary" onClick={this.loginClickEvent}>Login with Google</button>
+          </div>
+        </div>
       </div>
     );
   }
