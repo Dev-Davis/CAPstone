@@ -10,15 +10,15 @@ import './App.scss';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import HatNav from '../HatNav/HatNav';
-import Auth from '../Auth/Auth';
-import Home from '../Home/Home';
-import Profile from '../MyProfile/MyProfile';
-import SingleHat from '../SingleHat/SingleHat';
-import EditHat from '../EditHat/EditHat';
-import SignUp from '../SignUp/SignUp';
+import HatNav from '../Components/HatNav/HatNav';
+import Auth from '../Components/Auth/Auth';
+import Home from '../Components/Home/Home';
+import Profile from '../Components/MyProfile/MyProfile';
+import SingleHat from '../Components/SingleHat/SingleHat';
+import EditHat from '../Components/EditHat/EditHat';
+import SignUp from '../Components/SignUp/SignUp';
 
-import connection from '../../helpers/connection';
+import connection from '../helpers/connection';
 
 connection();
 

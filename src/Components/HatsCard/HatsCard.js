@@ -27,7 +27,6 @@ class HatsCard extends React.Component {
               <h3 className="card-title text-center">{hats.name}</h3>
               <h5 className="card-title text-center">{hats.type}</h5>
               <h5 className="card-title text-center">{hats.colorWay}</h5>
-              {/* <button className="btn btn-success" onClick={this.deleteMe}>Add</button> */}
             </div>
           </div>
         </div>

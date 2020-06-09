@@ -3,8 +3,13 @@
   height: 250px;
   border-radius: 50%;
   float: left;
-  margin: 90px 0 0 152px;
+  margin: 0 0 0 152px;
   border: 2px solid black;
+}
+
+.pic-name 
+{
+  margin-top: 4rem;
 }
 
 .profileForm {
@@ -20,17 +25,19 @@
 
 .aboutMe {
   background-color: white;
-  font-size: 34px;
+  font-size: 22px;
 }
 
 .uploadTitle {
   font-size: 33px;
+  padding-top: 2rem;
 }
 
 .aboutSection {
   border: 1px solid black;
   background-color: white;
   margin-top: 11px;
+  padding: 1rem;
 }
 
 .aboutMeDescription {
