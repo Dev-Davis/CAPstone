@@ -43,7 +43,7 @@ class Home extends React.Component {
   typeChange = e => this.stringStateField('type', e);
   colorWayChange = e => this.stringStateField('colorWay', e);
   descriptionChange = e => this.stringStateField('description', e);
-  
+
 
   getHats = () => {
     const { uid } = firebase.auth().currentUser;
@@ -64,10 +64,10 @@ class Home extends React.Component {
     hatData
       .postNewHat(saveHat)
       .then(() => this.getHats())
-      // .catch(err => console.error("unable to post new hat", err));
-      this.setState({ 
-        newHat: defaultHatInfo
-      })
+    // .catch(err => console.error("unable to post new hat", err));
+    this.setState({
+      newHat: defaultHatInfo
+    })
   };
 
   deleteHat = hatId => {
@@ -86,20 +86,24 @@ class Home extends React.Component {
       .getDownloadURL()
       .then(url => this.setState({ avatarURL: url }));
   };
-  
+
   render() {
     // const { newHat } = this.state;
     const makeHatCards = this.state.hats.map(hat => (
       <ProfileHatsCard key={hat.id} hats={hat} deleteHat={this.deleteHat} />
-      ));
-      
-      return (
+    ));
+
+    return (
       <div className="#">
         <div className="container">
-          <img src="https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/1625624_547718411992311_1237413250_n.jpg?_nc_cat=100&_nc_oc=AQm_nsS7WtfU9RuoqBrMTF29PCOzHt6-CZPofoYhrXCzuixgpclDeHS4PGvJ-Sf5tbQ&_nc_ht=scontent-msp1-1.xx&oh=ef4e2d2355e6e6ae3da59aa529c3f723&oe=5DE68724" alt="profile-pic" className="profilePhoto"/>
-          <form className="col-4 offset-8" onSubmit={this.submitForm}>
-            <div className="uploadTitle">
-              Add a hat...
+          <div class="row">
+            <div class="col-6 pic-name">
+              <h3 class="text-center">Sean Davis</h3>
+              <img src="https://i.ibb.co/2ccRgrh/WW-hat.jpg" alt="profile-pic" border="0" className="profilePhoto text-center"/>
+            </div>
+            <form className="col-6 hat-info" onSubmit={this.submitForm}>
+              <div className="uploadTitle">
+                Add a hat...
             </div>
               <div className="form-group">
                 <label htmlFor="hatName">Name</label>
@@ -107,7 +111,7 @@ class Home extends React.Component {
                   type="text"
                   className="form-control"
                   id="hatName"
-                  placeholder="Batman Snapback"
+                  placeholder="Hat Name"
                   value={this.state.newHat.name}
                   onChange={this.nameChange}
                 />
@@ -118,7 +122,7 @@ class Home extends React.Component {
                   type="text"
                   className="form-control"
                   id="hatType"
-                  placeholder="Snapback"
+                  placeholder="Hat Type"
                   value={this.state.newHat.type}
                   onChange={this.typeChange}
                 />
@@ -129,7 +133,7 @@ class Home extends React.Component {
                   type="text"
                   className="form-control"
                   id="hatColorWay"
-                  placeholder="Black and Yellow"
+                  placeholder="Hat Color"
                   value={this.state.newHat.colorWay}
                   onChange={this.colorWayChange}
                 />
@@ -140,7 +144,7 @@ class Home extends React.Component {
                   type="textarea"
                   className="form-control"
                   id="hatDescription"
-                  placeholder="A solid black hat with the Batman logo embroidered in the front"
+                  placeholder="Hat Description"
                   value={this.state.newHat.description}
                   onChange={this.descriptionChange}
                 />
@@ -148,18 +152,17 @@ class Home extends React.Component {
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-          </form>
+            </form>
+          </div>
         </div>
         <div className="aboutSection text-center col-4 offset-4">
-          <span className="aboutMe">About Me</span>
-          <br></br>
-        {/* </div>
-        <div className="aboutMeDescription col-4 offset-4"> */}
-          I am a lover of hats! This is a website for hat lovers such as myself. Hope you like it also.
+          <span className="aboutMe">About my hats</span>
+          <br />
+          Hat lover | Snapbacks | Dad hats | #hatstravaganza
         </div>
         <div className="container">
           <div className="d-flex flex-wrap profileCards">
-          {makeHatCards}
+            {makeHatCards}
           </div>
         </div>
       </div>
