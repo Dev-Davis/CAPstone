@@ -133,7 +133,7 @@ to get the comments for that hat */
           <h1 className="text-center">{profileHats.name}</h1>
           </div>
           <div className="card-body">
-            <img src={profileHats.imageUrl} className="card-img-top" alt="Pic of a hat" />
+          <img src={profileHats.imageUrl} className="col-12" border="0" alt="hat" name="picture of hat" />
             <h5 className="card-title">{profileHats.description}</h5>
             <Link className="btn btn-dark" to={profileLink}>Back To Profile</Link>
           </div>

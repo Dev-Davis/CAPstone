@@ -18,10 +18,10 @@ class HatsCard extends React.Component {
 
   render() {
     const { hats } = this.props;
-    // const singleLink = `single/${hats.id}`
+    const singleLink = `single/${hats.id}`
     return (
       <div className="card" ref={hats.id} style={{ width: 300 }}>
-       <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" />
+       {/* <img src={hats.imageUrl} className="card-img-top" alt="Pic of a hat" /> */}
         <div className="HatCard">
             <div className="card-body">
               <h3 className="card-title text-center">{hats.name}</h3>
