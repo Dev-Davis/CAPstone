@@ -1,22 +1,22 @@
 {
-  "user01": {
-    "firstName": "Sean",
-    "lastName": "Davis",
-    "userName": "iLL Gates",
-    "password": "password",
-    "email": "sean.d.davis86@gmail.com",
-    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
-    "aboutMe": "I am a lover of hats! This is a website for hat lovers such as myself. Hope you like it also.",
-    "profilePicUrl": "https://i.ibb.co/7V1VSMp/me-and-sis-2.jpg"
+  "user01" : {
+    "aboutMe" : "Hat lover | Snapbacks | Dad hats | #hatstravaganza",
+    "email" : "sean.d.davis86@gmail.com",
+    "firstName" : "Sean",
+    "lastName" : "Davis",
+    "password" : "pa$$word",
+    "uid" : "xnOEprZXmqZoGiD2OxRyhx1jQEr2",
+    "userName" : "iLL Gates",
+    "profilePic" : "https://i.ibb.co/2ccRgrh/WW-hat.jpg"
   },
-  "user02": {
-    "firstName": "Dot",
-    "lastName": "Davis",
-    "userName": "Dot Dang",
-    "password": "password",
-    "email": "sean.dev.davis@gmail.com",
-    "uid": "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
-    "aboutMe": "This has been giving me problems and I'm about to lock in on em and blow them to smitherines.",
-    "profilePicUrl": "https://i.ibb.co/bKJm19P/me-and-sis.jpg"
+  "user02" : {
+    "aboutMe" : "Hat-maniac",
+    "email" : "sean.dev.davis@gmail.com",
+    "firstName" : "Dot",
+    "lastName" : "Davis",
+    "password" : "pa$$word",
+    "uid" : "3b5o5tAMG9XzHoOOtUwwIghiXwQ2",
+    "userName" : "Dot Dang",
+    "profilePic" : "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/17796204_10155125622969144_7138030702620752671_n.jpg?_nc_cat=105&_nc_sid=174925&_nc_ohc=dcf8WK_z4csAX-qSJyo&_nc_ht=scontent-frx5-1.xx&oh=4307a7ab7478fe317d0670a62c45b1cf&oe=5F073772"
   }
 }
